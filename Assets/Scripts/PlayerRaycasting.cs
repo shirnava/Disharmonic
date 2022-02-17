@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerRaycasting : MonoBehaviour
 {
@@ -69,6 +70,7 @@ public class PlayerRaycasting : MonoBehaviour
                             player.GetComponent<Inventory>().hasGreenKey = false;
                             Debug.Log("Clicked on the door will be destroyed: " + whatIHit.collider.gameObject.name);
                             Destroy (whatIHit.collider.gameObject);
+                            SceneManager.LoadScene("Town", LoadSceneMode.Single);
                         }
                         else
                         {
