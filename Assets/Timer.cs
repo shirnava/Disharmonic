@@ -6,7 +6,9 @@ using UnityEngine.UI;
 public class Timer : MonoBehaviour
 {
     // Starts with 10 minutes (600 seconds)
-    public float currTime = 600;
+    [SerializeField]
+    public float currTime;
+    
     public Text timeText;
 
     // Update is called once per frame
