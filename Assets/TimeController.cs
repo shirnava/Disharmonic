@@ -42,7 +42,12 @@ public class TimeController : MonoBehaviour
     [SerializeField]
     private float maxMoonLightIntensity;
 
+    [SerializeField]
+    private Gradient fogColor;
+
     private DateTime currentTime;
+
+    private DateTime startOfDay;
 
     private TimeSpan sunriseTime;
     
@@ -51,6 +56,7 @@ public class TimeController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        startOfDay = DateTime.Now.Date;
         currentTime = DateTime.Now.Date + TimeSpan.FromHours(startHour);
 
         sunriseTime = TimeSpan.FromHours(sunriseHour);
@@ -74,12 +80,14 @@ public class TimeController : MonoBehaviour
         {
             timeText.text = currentTime.ToString("HH:mm");
         }
+        startOfDay = currentTime.Date;
     }
 
     // Rotates the sun around the game world over a timespan
     private void RotateSun()
     {
         float sunLightRotation;
+        float moonLightRotation;
 
         if (currentTime.TimeOfDay > sunriseTime && currentTime.TimeOfDay < sunsetTime)
         {
@@ -89,6 +97,7 @@ public class TimeController : MonoBehaviour
             double percentage = timeSinceSunrise.TotalMinutes / sunriseToSunsetDuration.TotalMinutes;
 
             sunLightRotation = Mathf.Lerp(0, 180, (float)percentage);
+            moonLightRotation = Mathf.Lerp(180, 360, (float)percentage);
         }
         else
         {
@@ -98,9 +107,11 @@ public class TimeController : MonoBehaviour
             double percentage = timeSinceSunset.TotalMinutes / sunsetToSunriseDuration.TotalMinutes;
 
             sunLightRotation = Mathf.Lerp(180, 360, (float)percentage);
+            moonLightRotation = Mathf.Lerp(0, 180, (float)percentage);
         }
 
         sunLight.transform.rotation = Quaternion.AngleAxis(sunLightRotation, Vector3.right);
+        moonLight.transform.rotation = Quaternion.AngleAxis(moonLightRotation, Vector3.right);
     }
 
     // Calculates the difference between two TimeSpan values
@@ -119,9 +130,15 @@ public class TimeController : MonoBehaviour
     // Updates the ambient light and intensity of both the sun and moon light sources
     private void UpdateLightSettings()
     {
+        // Updating Ambient Light
         float dotProduct = Vector3.Dot(sunLight.transform.forward, Vector3.down);
         sunLight.intensity = Mathf.Lerp(0, maxSunLightIntensity, lightChangeCurve.Evaluate(dotProduct));
         moonLight.intensity = Mathf.Lerp(maxMoonLightIntensity, 0, lightChangeCurve.Evaluate(dotProduct));
         RenderSettings.ambientLight = Color.Lerp(nightAmbientLight, dayAmbientLight, lightChangeCurve.Evaluate(dotProduct));
+        
+        // Updating Fog
+        TimeSpan timeElapsed = currentTime - startOfDay;
+        float gradientPos = (float)timeElapsed.TotalMinutes / 1440;
+        RenderSettings.fogColor = fogColor.Evaluate(gradientPos);
     }
 }
