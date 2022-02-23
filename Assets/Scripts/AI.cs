@@ -5,12 +5,15 @@ using UnityEngine.AI;
 
 public class AI : MonoBehaviour{
 
+
     public float lookRadius = 10f;
     Transform target;
     NavMeshAgent agent;
+    private Vector3 startPosition;
 
     // Start is called before the first frame update
     void Start(){
+        startPosition = transform.position;
         target = PlayerManager.instance.player.transform;
         agent = GetComponent<NavMeshAgent>();
         
@@ -24,8 +27,20 @@ public class AI : MonoBehaviour{
         {
             agent.SetDestination(target.position);
         }
+        else
+        {
+            agent.SetDestination(RoamPosition());
+        }
+    }
 
-        
+    private Vector3 RoamPosition()
+    {
+       return startPosition + GetRandomPosition() * Random.Range(10f, 30f);
+    }
+
+    private Vector3 GetRandomPosition()
+    {
+        return new Vector3(UnityEngine.Random.Range(-2f, 2f), UnityEngine.Random.Range(-2f, 2f)).normalized;
     }
 
     void OnDrawGizmosSelected(){
