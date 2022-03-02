@@ -2101,7 +2101,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90b13e7b7aa1ecb45bfe264b9895f664, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lookRadius: 10
+  lookRadius: 7
+  hearRadius: 12
+  walkRadius: 10
+  waiting: 0
+  moveDelay: 5
+  centerSearch: {x: 0, y: 0, z: 0}
 --- !u!54 &1721377463
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2131,7 +2136,7 @@ NavMeshAgent:
   m_Speed: 2
   m_Acceleration: 20
   avoidancePriority: 50
-  m_AngularSpeed: 120
+  m_AngularSpeed: 100
   m_StoppingDistance: 2
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
