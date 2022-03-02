@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class AI : MonoBehaviour{
+public class AI : MonoBehaviour {
 
 
     public float lookRadius = 10f;
@@ -11,12 +11,41 @@ public class AI : MonoBehaviour{
     Transform target;
     NavMeshAgent agent;
     private Vector3 startPosition;
-    [Range(1, 10)] public float walkRadius;
+    [Range(1, 5)] public float walkRadius;
     public bool waiting = false;
     public float moveDelay = 5f;
     public Vector3 centerSearch;
+    public AIState currentState;
+    [HideInInspector] AIState nextState;
 
-    public enum State { Wander, Searching, Hunting }
+    public enum AIState { Wander, Searching, Hunting }
+
+    protected void setState(AIState state)
+    {
+        nextState = state;
+        if (nextState != currentState) {
+            currentState = nextState;
+        }
+    }
+
+    protected void runState()
+    {
+        switch (currentState)
+        {
+            case AIState.Wander:
+                Wander();
+                break;
+
+            case AIState.Searching:
+                Searching();
+                break;
+
+            case AIState.Hunting:
+                Hunting();
+                break;
+        }
+    }
+
 
     // Start is called before the first frame update
     void Start(){
@@ -33,20 +62,39 @@ public class AI : MonoBehaviour{
 
         if(distance <= lookRadius)
         {
-            agent.SetDestination(target.position);
+            setState(AIState.Hunting);
         }
         else if(distance <= hearRadius)
         {
-            centerSearch = target.position;
-            agent.SetDestination(centerSearch);
+            setState(AIState.Searching);
         }
         else
         {
-            if(agent != null && agent.remainingDistance <= agent.stoppingDistance)
-            agent.SetDestination(RoamPosition());
-            waiting = true;
-            StartCoroutine(Wait());
+            setState(AIState.Wander);
+
         }
+
+        runState();
+    }
+
+    private void Wander()
+    {
+        if (agent != null && agent.remainingDistance <= agent.stoppingDistance)
+            agent.SetDestination(RoamPosition());
+        waiting = true;
+        StartCoroutine(Wait());
+    }
+
+    private void Searching()
+    {
+        centerSearch = target.position;
+        agent.SetDestination(centerSearch);
+    }
+
+    private void Hunting()
+    {
+        agent.SetDestination(target.position);
+
     }
 
     private Vector3 RoamPosition()
