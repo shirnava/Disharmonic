@@ -149,6 +149,5 @@ public class TimeController : MonoBehaviour
         RenderSettings.fogDensity = ( 0.08f + 0.4f * (float)Math.Sqrt(
             Mathf.Max( (float)Mathf.Cos(2.0f * (currentTime.Hour + currentTime.Minute/60.0f) *((float)Math.PI/24.0f)), 0)
         ) );
-        Debug.Log(RenderSettings.fogDensity);
     }
 }
