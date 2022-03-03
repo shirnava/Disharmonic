@@ -108,7 +108,10 @@ public class TimeController : MonoBehaviour
 
             sunLightRotation = Mathf.Lerp(180, 360, (float)percentage);
             moonLightRotation = Mathf.Lerp(0, 180, (float)percentage);
+
         }
+
+        
 
         sunLight.transform.rotation = Quaternion.AngleAxis(sunLightRotation, Vector3.right);
         moonLight.transform.rotation = Quaternion.AngleAxis(moonLightRotation, Vector3.right);
@@ -136,9 +139,16 @@ public class TimeController : MonoBehaviour
         moonLight.intensity = Mathf.Lerp(maxMoonLightIntensity, 0, lightChangeCurve.Evaluate(dotProduct));
         RenderSettings.ambientLight = Color.Lerp(nightAmbientLight, dayAmbientLight, lightChangeCurve.Evaluate(dotProduct));
         
-        // Updating Fog
+        // // Updating Fog
         TimeSpan timeElapsed = currentTime - startOfDay;
         float gradientPos = (float)timeElapsed.TotalMinutes / 1440;
+
+      
         RenderSettings.fogColor = fogColor.Evaluate(gradientPos);
+       
+        RenderSettings.fogDensity = ( 0.08f + 0.4f * (float)Math.Sqrt(
+            Mathf.Max( (float)Mathf.Cos(2.0f * (currentTime.Hour + currentTime.Minute/60.0f) *((float)Math.PI/24.0f)), 0)
+        ) );
+        Debug.Log(RenderSettings.fogDensity);
     }
 }

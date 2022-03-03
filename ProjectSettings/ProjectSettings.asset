@@ -591,9 +591,11 @@ PlayerSettings:
   webGLThreadsSupport: 0
   webGLDecompressionFallback: 0
   scriptingDefineSymbols:
-    1: STARTER_ASSETS_PACKAGES_CHECKED
-    7: STARTER_ASSETS_PACKAGES_CHECKED
+    1: STARTER_ASSETS_PACKAGES_CHECKED;CROSS_PLATFORM_INPUT
+    4: CROSS_PLATFORM_INPUT;MOBILE_INPUT
+    7: STARTER_ASSETS_PACKAGES_CHECKED;CROSS_PLATFORM_INPUT;MOBILE_INPUT
     13: STARTER_ASSETS_PACKAGES_CHECKED
+    14: MOBILE_INPUT
   additionalCompilerArguments: {}
   platformArchitecture: {}
   scriptingBackend: {}
