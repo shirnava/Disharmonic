@@ -8,6 +8,8 @@ public class PlayerRaycasting : MonoBehaviour
     public float distanceToSee;
     RaycastHit whatIHit; 
     public GameObject player; 
+
+    public bool ItHit = false;
     
 
     // Start is called before the first frame update
@@ -21,11 +23,47 @@ public class PlayerRaycasting : MonoBehaviour
     {
         Debug.DrawRay(this.transform.position, this.transform.forward * distanceToSee, Color.magenta);
         
+       // if(Physics.Raycast(this.transform.position, this.transform.forward, out whatIHit, distanceToSee) )
+         //       {       
+             try{
+if(whatIHit.collider.tag == null)
+                    {
+                    Debug.Log("its null");
+
+                    }
+             }   
+             catch
+             {
+                                     //Debug.Log("its rly null");
+                                    // Debug.Log("it hit is: " + ItHit);
+                                     ItHit = false;
+
+             }         
+                    
+                    
+                    
+           //     }  
         if (Physics.Raycast(this.transform.position, this.transform.forward, out whatIHit, distanceToSee))
         {
+           
+            if(whatIHit.collider.tag == "NPC")
+                {                   
+                    //Debug.Log("Hit NPC");
+                    ItHit = true;
+                    
+                }  
+                  
+                 if(whatIHit.collider.tag != "NPC")
+                {                   
+                    //Debug.Log("Not NPC");
+                    ItHit = false;
+                    
+                }  
+                 
             if(Input.GetKeyDown (KeyCode.E)) 
             //if(Input.GetMouseButtonDown(0))
-            {           
+            {      
+                      
                 if(whatIHit.collider.tag == "Keycards")
                 {                   
                     if (whatIHit.collider.gameObject.GetComponent<KeyCards>().whatKeyAmI == KeyCards.Keycards.redCard)

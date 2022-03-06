@@ -27,11 +27,16 @@ public class DialogueSystem: MonoBehaviour {
 
     public AudioClip audioClip;
     AudioSource audioSource;
+       
+
+    
 
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
         dialogueText.text = "";
+        
+        
     }
 
     void Update()
@@ -42,10 +47,13 @@ public class DialogueSystem: MonoBehaviour {
     public void EnterRangeOfNPC()
     {
         outOfRange = false;
-        dialogueGUI.SetActive(true);
+        //dialogueGUI.SetActive(true);
+        
+        
         if (dialogueActive == true)
         {
-            dialogueGUI.SetActive(false);
+            
+            //dialogueGUI.SetActive(false);
         }
     }
 
@@ -152,7 +160,7 @@ public class DialogueSystem: MonoBehaviour {
 
     public void DropDialogue()
     {       
-        dialogueGUI.SetActive(false);
+        //dialogueGUI.SetActive(false);
         dialogueBoxGUI.gameObject.SetActive(false);
     }
 
@@ -161,10 +169,11 @@ public class DialogueSystem: MonoBehaviour {
         outOfRange = true;
         if (outOfRange == true)
         {
+            //FindObjectOfType<PlayerRaycasting>().ItHit = false;
             letterIsMultiplied = false;
             dialogueActive = false;
             StopAllCoroutines();
-            dialogueGUI.SetActive(false);
+            //dialogueGUI.SetActive(false);
             dialogueBoxGUI.gameObject.SetActive(false);
         }
     }

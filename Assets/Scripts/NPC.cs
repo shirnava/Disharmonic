@@ -15,27 +15,40 @@ public class NPC : MonoBehaviour {
 
     [TextArea(5, 10)]
     public string[] sentences;
+     
 
     void Start () {
+        
         dialogueSystem = FindObjectOfType<DialogueSystem>();
+        
+        
     }
 	
 	void Update () {
           Vector3 Pos = Camera.main.WorldToScreenPoint(NPCCharacter.position);
           Pos.y += 175;
           ChatBackGround.position = Pos;
+          
     }
 
     public void OnTriggerStay(Collider other)
     {
+                
+       
         this.gameObject.GetComponent<NPC>().enabled = true;
         FindObjectOfType<DialogueSystem>().EnterRangeOfNPC();
+        
         if ((other.gameObject.tag == "Player") && Input.GetKeyDown(KeyCode.F))
         {
-            this.gameObject.GetComponent<NPC>().enabled = true;
-            dialogueSystem.Names = Name;
-            dialogueSystem.dialogueLines = sentences;
-            FindObjectOfType<DialogueSystem>().NPCName();
+            if(FindObjectOfType<PlayerRaycasting>().ItHit == true)
+            {
+                
+                this.gameObject.GetComponent<NPC>().enabled = true;
+                dialogueSystem.Names = Name;
+                dialogueSystem.dialogueLines = sentences;
+                FindObjectOfType<DialogueSystem>().NPCName();
+            }
+            
         }
     }
 
