@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class TimeController : MonoBehaviour
 {
@@ -75,11 +76,20 @@ public class TimeController : MonoBehaviour
     private void UpdateTimeOfDay()
     {
         currentTime = currentTime.AddSeconds(Time.deltaTime * timeMultiplier);
+        
+        
 
         if (timeText != null)
         {
             timeText.text = currentTime.ToString("HH:mm");
         }
+
+        if(currentTime.ToString("HH:mm") == "23:30")
+        {
+            //Debug.Log("End of the day");
+            SceneManager.LoadScene("EndDayScreen");
+        }
+
         startOfDay = currentTime.Date;
     }
 
