@@ -175,6 +175,16 @@ namespace StarterAssets
 			{
 				// move
 				inputDirection = transform.right * _input.move.x + transform.forward * _input.move.y;
+
+				// Play footstep
+				if (_input.sprint)
+				{
+					FindObjectOfType<AudioManager>().PlayIfOff("run");
+				}
+				else
+				{
+					FindObjectOfType<AudioManager>().PlayIfOff("walk");
+				}
 			}
 
 			// move the player
