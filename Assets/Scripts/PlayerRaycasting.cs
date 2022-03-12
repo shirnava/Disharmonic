@@ -95,6 +95,7 @@ if(whatIHit.collider.tag == null)
                             player.GetComponent<Inventory>().hasRedKey = false;
                             Debug.Log("Clicked on the door will be destroyed: " + whatIHit.collider.gameObject.name);
                             Destroy (whatIHit.collider.gameObject);
+                             SceneManager.LoadScene("Town", LoadSceneMode.Single);
                         }
                         else
                         {
