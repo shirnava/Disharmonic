@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
 
+using StarterAssets;
+
 public class DialogueSystem: MonoBehaviour {
 
     public Text nameText;
@@ -161,6 +163,11 @@ public class DialogueSystem: MonoBehaviour {
     public void DropDialogue()
     {       
         //dialogueGUI.SetActive(false);
+        // Debug.Log("Dropping Dialogue!");
+        FindObjectOfType<FirstPersonController>().MoveSpeed = 4.0f;
+        FindObjectOfType<FirstPersonController>().SprintSpeed = 6.0f;
+        FindObjectOfType<FirstPersonController>().RotationSpeed = 5.0f;
+        FindObjectOfType<FirstPersonController>().SpeedChangeRate = 10.0f;
         dialogueBoxGUI.gameObject.SetActive(false);
     }
 

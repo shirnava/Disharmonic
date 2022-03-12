@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
 
+using StarterAssets;
+
 [System.Serializable]
 public class NPC : MonoBehaviour {
 
@@ -15,11 +17,13 @@ public class NPC : MonoBehaviour {
 
     [TextArea(5, 10)]
     public string[] sentences;
+    public GameObject player; 
      
 
     void Start () {
         
         dialogueSystem = FindObjectOfType<DialogueSystem>();
+        player = GameObject.FindWithTag("Player");
         
         
     }
@@ -47,15 +51,31 @@ public class NPC : MonoBehaviour {
                 dialogueSystem.Names = Name;
                 dialogueSystem.dialogueLines = sentences;
                 FindObjectOfType<DialogueSystem>().NPCName();
+                //Debug.Log("its hit");
+
+                FindObjectOfType<FirstPersonController>().MoveSpeed = 0.0f;
+                FindObjectOfType<FirstPersonController>().SprintSpeed = 0.0f;
+                FindObjectOfType<FirstPersonController>().RotationSpeed = 0.0f;
+                FindObjectOfType<FirstPersonController>().SpeedChangeRate = 0.0f;
+
             }
             
         }
+        
     }
 
     public void OnTriggerExit()
     {
         FindObjectOfType<DialogueSystem>().OutOfRange();
         this.gameObject.GetComponent<NPC>().enabled = false;
+
+        FindObjectOfType<FirstPersonController>().MoveSpeed = 4.0f;
+        FindObjectOfType<FirstPersonController>().SprintSpeed = 6.0f;
+        FindObjectOfType<FirstPersonController>().RotationSpeed = 5.0f;
+        FindObjectOfType<FirstPersonController>().SpeedChangeRate = 10.0f;
+        
+
+        
     }
 }
 
