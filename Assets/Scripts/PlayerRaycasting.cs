@@ -10,6 +10,11 @@ public class PlayerRaycasting : MonoBehaviour
     public GameObject player; 
 
     public bool ItHit = false;
+    public bool ItHitTestCube = false;
+
+    public Transform theDest;
+
+ 
     
 
     // Start is called before the first frame update
@@ -58,7 +63,49 @@ if(whatIHit.collider.tag == null)
                     //Debug.Log("Not NPC");
                     ItHit = false;
                     
+                
                 }  
+
+                if(whatIHit.collider.tag == "TestThrowCube")
+                {                   
+                    //Debug.Log("Hit NPC");
+                    ItHitTestCube = true;
+                    
+                }  
+                  
+                 if(whatIHit.collider.tag != "TestThrowCube")
+                {                   
+                    //Debug.Log("Not NPC");
+                    ItHitTestCube = false;
+                    
+                
+                }  
+
+        //     if(whatIHit.collider.tag == "TestThrowCube")
+        //     {
+        //         //Debug.Log("I hit it here");
+        //         Cursor.visible = true;
+        // Cursor.lockState = CursorLockMode.None;
+        //         if (Input.GetMouseButtonDown(1))
+        //         {
+        //             Debug.Log("mouse click wored");
+        //             GetComponent<Collider>().enabled = false;
+        //             GetComponent<Rigidbody>().useGravity = false;
+        //             this.transform.position = theDest.position; 
+        //             this.transform.parent = GameObject.Find("Destination").transform;
+        //         }
+        //         // void OnMouseDown() 
+        //         // {
+                    
+
+        //         // }
+        //         //  void OnMouseUp() 
+        //         //     {
+        //         //         this.transform.parent = null;
+        //         //     GetComponent<BoxCollider>().enabled = true;
+        //         //     GetComponent<Rigidbody>().useGravity = true;
+        //         // }
+        //     }
                  
             if(Input.GetKeyDown (KeyCode.E)) 
             //if(Input.GetMouseButtonDown(0))
