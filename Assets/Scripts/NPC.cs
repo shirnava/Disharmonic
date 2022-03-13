@@ -59,6 +59,8 @@ public class NPC : MonoBehaviour {
                 FindObjectOfType<FirstPersonController>().RotationSpeed = 0.0f;
                 FindObjectOfType<FirstPersonController>().SpeedChangeRate = 0.0f;
 
+               
+
             }
             
         }

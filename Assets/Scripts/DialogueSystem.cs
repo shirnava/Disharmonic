@@ -94,14 +94,35 @@ public class DialogueSystem: MonoBehaviour {
                         dialogueEnded = true;
                     }
                 }
+
+                // Maybe put outside while loop? Test more if this causes a bug
+                if(Input.GetKeyDown(KeyCode.R))
+                {
+                    //Debug.Log("IT IS  R");
+
+                    dialogueEnded = false;
+                    dialogueActive = false;
+                    DropDialogue();
+                }
+
                 yield return 0;
             }
 
             while (true)
             {
+                
                 if (Input.GetKeyDown(DialogueInput) && dialogueEnded == false)
                 {
                     break;
+                }
+
+                if(Input.GetKeyDown(KeyCode.R))
+                {
+                    //Debug.Log("IT IS  R");
+
+                    dialogueEnded = false;
+                    dialogueActive = false;
+                    DropDialogue();
                 }
                 yield return 0;
             }
