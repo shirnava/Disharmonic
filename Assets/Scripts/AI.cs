@@ -17,6 +17,8 @@ public class AI : MonoBehaviour {
     public Vector3 centerSearch;
     public AIState currentState;
     [HideInInspector] AIState nextState;
+    public float huntSpeed = 5f;
+    public float walkSpeed = 3f;
 
     public enum AIState { Wander, Searching, Hunting }
 
@@ -79,6 +81,7 @@ public class AI : MonoBehaviour {
 
     private void Wander()
     {
+        agent.speed = walkSpeed;
         if (agent != null && agent.remainingDistance <= agent.stoppingDistance)
             agent.SetDestination(RoamPosition());
         waiting = true;
@@ -87,12 +90,14 @@ public class AI : MonoBehaviour {
 
     private void Searching()
     {
+        agent.speed = walkSpeed;
         centerSearch = target.position;
         agent.SetDestination(centerSearch);
     }
 
     private void Hunting()
     {
+        agent.speed = huntSpeed;
         agent.SetDestination(target.position);
 
     }
