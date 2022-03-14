@@ -54,6 +54,12 @@ public class TimeController : MonoBehaviour
     
     private TimeSpan sunsetTime;
 
+    [SerializeField]
+    private ParticleSystem fog1;
+
+    [SerializeField]
+    private ParticleSystem fog2;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -99,6 +105,7 @@ public class TimeController : MonoBehaviour
         float sunLightRotation;
         float moonLightRotation;
 
+        //if daytime
         if (currentTime.TimeOfDay > sunriseTime && currentTime.TimeOfDay < sunsetTime)
         {
             TimeSpan sunriseToSunsetDuration = CalculateTimeDifference(sunriseTime, sunsetTime);
@@ -109,6 +116,7 @@ public class TimeController : MonoBehaviour
             sunLightRotation = Mathf.Lerp(0, 180, (float)percentage);
             moonLightRotation = Mathf.Lerp(180, 360, (float)percentage);
         }
+        //else if nighttime
         else
         {
             TimeSpan sunsetToSunriseDuration = CalculateTimeDifference(sunsetTime, sunriseTime);
@@ -159,5 +167,28 @@ public class TimeController : MonoBehaviour
         RenderSettings.fogDensity = ( 0.08f + 0.4f * (float)Math.Sqrt(
             Mathf.Max( (float)Mathf.Cos(2.0f * (currentTime.Hour + currentTime.Minute/60.0f) *((float)Math.PI/24.0f)), 0)
         ) );
+       
+    }
+
+    private void UpdateFog()
+    {
+        // ParticleSystem.MainModule fog1 = GetComponent<ParticleSystem>("Fog 1").main;
+        // ParticleSystem.MainModule fog2 = GetComponent<ParticleSystem>("Fog 2").main;
+        ParticleSystem.MainModule mainfog1 = GameObject.Find("Fog 1").GetComponent<ParticleSystem>().main;
+        ParticleSystem.MainModule mainfog2 = GameObject.Find("Fog 2").GetComponent<ParticleSystem>().main;
+
+         float opacity =( 0.08f + 255.0f * (float)Math.Sqrt(
+            Mathf.Max( (float)Mathf.Cos(2.0f * (currentTime.Hour + currentTime.Minute/60.0f) *((float)Math.PI/24.0f)), 0)
+        ) );
+
+        mainfog1.startColor = new ParticleSystem.MinMaxGradient(new Color(221, 221, 221, opacity));
+        mainfog2.startColor = new ParticleSystem.MinMaxGradient(new Color(221, 221, 221, opacity));
+        // mainfog1.stopColor = new Color(1, 0, 1, opacity);
+        // mainfog2.stopColor = new Color(1, 0, 1, opacity);
+
+        // fog1.startColor.A=opacity;
+        // fog1.stopColor.A=opacity;
+        // fog2.startColor.A=opacity;
+        // fog2.stopColor.A=opacity;
     }
 }
