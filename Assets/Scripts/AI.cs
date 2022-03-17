@@ -5,15 +5,13 @@ using UnityEngine.AI;
 
 public class AI : MonoBehaviour {
 
-
     public float lookRadius = 10f;
-    public float hearRadius = 20f;
     Transform target;
     NavMeshAgent agent;
     private Vector3 startPosition;
     [Range(1, 5)] public float walkRadius;
     public bool waiting = false;
-    public float moveDelay = 5f;
+    public float moveDelay = 5;
     public Vector3 centerSearch;
     public AIState currentState;
     [HideInInspector] AIState nextState;
@@ -64,11 +62,11 @@ public class AI : MonoBehaviour {
     void Update(){
         float distance = Vector3.Distance(target.position, transform.position);
 
-        if(distance <= lookRadius)
+        if((playerSound.inRange == true) && (playerSound.withinAttack == true))
         {
             setState(AIState.Hunting);
         }
-        else if(distance <= hearRadius)
+        else if((playerSound.inRange == true) && (playerSound.withinAttack == false))
         {
             setState(AIState.Searching);
         }

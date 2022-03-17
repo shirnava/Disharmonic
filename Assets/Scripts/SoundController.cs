@@ -7,9 +7,10 @@ public class SoundController : MonoBehaviour
 {
     private Vector3 startPosition;
     public float soundRadius;
-    public float idleSound = 2f;
-    public float walkSound = 5f;
-    public float runSound = 10f;
+    public float attackRadius = 20f;
+    public float idleSound = 3f;
+    public float walkSound = 15f;
+    public float runSound = 30f;
     public bool inRange;
     public bool withinAttack;
     Transform target;
@@ -28,6 +29,9 @@ public class SoundController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+    float distance = Vector3.Distance(target.position, transform.position);
+
         if (player.isRunning == true)
         {
             soundRadius = runSound;
@@ -40,6 +44,28 @@ public class SoundController : MonoBehaviour
         {
             soundRadius = idleSound;
         }
+
+
+        if(distance <= soundRadius)
+        {
+            inRange = true;
+
+            if(distance <= attackRadius)
+            {
+                withinAttack = true;
+            }
+            else
+            {
+                withinAttack = false;
+            }
+        }
+
+        else
+        {
+            inRange = false;
+            withinAttack = false;
+        }
+
     }
 
     void OnDrawGizmosSelected()
