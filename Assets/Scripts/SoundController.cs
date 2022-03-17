@@ -7,10 +7,10 @@ public class SoundController : MonoBehaviour
 {
     private Vector3 startPosition;
     public float soundRadius;
-    public float attackRadius = 20f;
+    public float attackRadius = 15f;
     public float idleSound = 3f;
-    public float walkSound = 15f;
-    public float runSound = 30f;
+    public float walkSound = 20f;
+    public float runSound = 35f;
     public bool inRange;
     public bool withinAttack;
     Transform target;
@@ -54,7 +54,7 @@ public class SoundController : MonoBehaviour
             {
                 withinAttack = true;
             }
-            else
+            else if(distance > attackRadius)
             {
                 withinAttack = false;
             }
