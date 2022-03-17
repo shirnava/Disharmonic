@@ -19,6 +19,7 @@ public class AI : MonoBehaviour {
     [HideInInspector] AIState nextState;
     public float huntSpeed = 5f;
     public float walkSpeed = 3f;
+    public SoundController playerSound;
 
     public enum AIState { Wander, Searching, Hunting }
 
@@ -55,7 +56,8 @@ public class AI : MonoBehaviour {
         target = PlayerManager.instance.player.transform;
         agent = GetComponent<NavMeshAgent>();
         agent.SetDestination(RoamPosition());
-        
+        playerSound = GameObject.Find("PlayerCapsule").GetComponent<SoundController>();
+
     }
 
     // Update is called once per frame
