@@ -6,6 +6,8 @@ using UnityEngine.AI;
 public class AI : MonoBehaviour {
 
     public float lookRadius = 10f;
+    public float attackRadius = 2f;
+    public float distance;
     Transform target;
     NavMeshAgent agent;
     private Vector3 startPosition;
@@ -18,6 +20,7 @@ public class AI : MonoBehaviour {
     public float huntSpeed = 5f;
     public float walkSpeed = 3f;
     public SoundController playerSound;
+    public PlayerHealth playerHealth;
 
     public enum AIState { Wander, Searching, Hunting }
 
@@ -49,24 +52,25 @@ public class AI : MonoBehaviour {
 
 
     // Start is called before the first frame update
-    void Start(){
+    void Start() {
         startPosition = transform.position;
         target = PlayerManager.instance.player.transform;
         agent = GetComponent<NavMeshAgent>();
         agent.SetDestination(RoamPosition());
         playerSound = GameObject.Find("PlayerCapsule").GetComponent<SoundController>();
+        playerHealth = GameObject.Find("PlayerCapsule").GetComponent<PlayerHealth>();
 
     }
 
     // Update is called once per frame
-    void Update(){
-        float distance = Vector3.Distance(target.position, transform.position);
+    void Update() {
+        distance = Vector3.Distance(target.position, transform.position);
 
-        if((playerSound.inRange == true) && (playerSound.withinAttack == true))
+        if ((playerSound.inRange == true) && (playerSound.withinAttack == true))
         {
             setState(AIState.Hunting);
         }
-        else if((playerSound.inRange == true) && (playerSound.withinAttack == false))
+        else if ((playerSound.inRange == true) && (playerSound.withinAttack == false))
         {
             setState(AIState.Searching);
         }
@@ -97,8 +101,24 @@ public class AI : MonoBehaviour {
 
     private void Hunting()
     {
-        agent.speed = huntSpeed;
-        agent.SetDestination(target.position);
+    float attackTime = 0;
+    float attackDelay = 10;
+
+    agent.speed = huntSpeed;
+    agent.SetDestination(target.position);
+
+        if (distance <= attackRadius)
+        {
+            if (Time.time - attackTime < attackDelay)
+            {
+                return;
+            }
+            else
+            {
+                playerHealth.currentHealth -= 50;
+                attackTime = Time.time;
+            }
+        }
 
     }
 
@@ -123,5 +143,6 @@ public class AI : MonoBehaviour {
     void OnDrawGizmosSelected(){
         Gizmos.color = Color.red; ;
         Gizmos.DrawWireSphere(transform.position, lookRadius);
+        Gizmos.DrawWireSphere(transform.position, attackRadius);
     }
 }
