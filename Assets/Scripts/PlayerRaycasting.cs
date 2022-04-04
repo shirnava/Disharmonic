@@ -153,6 +153,10 @@ if(whatIHit.collider.tag == null)
                     {
                         SceneManager.LoadScene("PoliceStation", LoadSceneMode.Single);
                     }
+                     else if (whatIHit.collider.gameObject.GetComponent<DoorManager>().whatDoorAmI == DoorManager.Doors.insidePoliceStationDoor)
+                    {
+                        SceneManager.LoadScene("Town", LoadSceneMode.Single);
+                    }
                     else if (whatIHit.collider.gameObject.GetComponent<DoorManager>().whatDoorAmI == DoorManager.Doors.greenDoor)
                     {
                         if (player.GetComponent<Inventory>().hasGreenKey == true)
