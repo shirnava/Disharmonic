@@ -12,9 +12,10 @@ public class PlayerRaycasting : MonoBehaviour
     public bool ItHit = false;
     public bool ItHitTestCube = false;
 
+    public bool loadFromStation = false;
+
     public Transform theDest;
 
- 
     
 
     // Start is called before the first frame update
@@ -27,6 +28,14 @@ public class PlayerRaycasting : MonoBehaviour
     void Update()
     {
         Debug.DrawRay(this.transform.position, this.transform.forward * distanceToSee, Color.magenta);
+
+        if (loadFromStation == true)
+        {
+            Debug.Log("look: " + player.transform.position);
+            Vector3 pos = transform.position;
+                        pos.x = 275.73f;
+                        player.transform.position = pos;
+        }
         
        // if(Physics.Raycast(this.transform.position, this.transform.forward, out whatIHit, distanceToSee) )
          //       {       
@@ -142,7 +151,9 @@ if(whatIHit.collider.tag == null)
                             player.GetComponent<Inventory>().hasRedKey = false;
                             Debug.Log("Clicked on the door will be destroyed: " + whatIHit.collider.gameObject.name);
                             Destroy (whatIHit.collider.gameObject);
+                            
                              SceneManager.LoadScene("Town", LoadSceneMode.Single);
+                             
                         }
                         else
                         {
@@ -151,11 +162,19 @@ if(whatIHit.collider.tag == null)
                     } 
                     else if (whatIHit.collider.gameObject.GetComponent<DoorManager>().whatDoorAmI == DoorManager.Doors.policeStationDoor)
                     {
+                        // Debug.Log("look: " + player.transform.position.x);
                         SceneManager.LoadScene("PoliceStation", LoadSceneMode.Single);
                     }
                      else if (whatIHit.collider.gameObject.GetComponent<DoorManager>().whatDoorAmI == DoorManager.Doors.insidePoliceStationDoor)
                     {
+                        Vector3 pos = transform.position;
+                        pos.x = 275.73f;
+                        player.transform.position = pos;
+                        loadFromStation = true;
                         SceneManager.LoadScene("Town", LoadSceneMode.Single);
+                         
+                         
+                        //  player.transform.position.x = new Vector3(275.23f, 0, 0);
                     }
                     else if (whatIHit.collider.gameObject.GetComponent<DoorManager>().whatDoorAmI == DoorManager.Doors.greenDoor)
                     {
