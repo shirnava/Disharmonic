@@ -165,6 +165,11 @@ if(whatIHit.collider.tag == null)
                         // Debug.Log("look: " + player.transform.position.x);
                         SceneManager.LoadScene("PoliceStation", LoadSceneMode.Single);
                     }
+                    else if (whatIHit.collider.gameObject.GetComponent<DoorManager>().whatDoorAmI == DoorManager.Doors.schoolDoor)
+                    {
+                        // Debug.Log("look: " + player.transform.position.x);
+                        SceneManager.LoadScene("School", LoadSceneMode.Single);
+                    }
                      else if (whatIHit.collider.gameObject.GetComponent<DoorManager>().whatDoorAmI == DoorManager.Doors.insidePoliceStationDoor)
                     {
                         Vector3 pos = transform.position;

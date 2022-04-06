@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/PoliceStation.unity
     guid: d079afe932356114d877f62f1e9f5141
+  - enabled: 1
+    path: Assets/Scenes/School.unity
+    guid: d79bbf409ff0d164ca620bfc160553bf
   m_configObjects: {}
