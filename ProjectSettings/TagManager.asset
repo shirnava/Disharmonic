@@ -9,6 +9,7 @@ TagManager:
   - Doors
   - NPC
   - TestThrowCube
+  - Enemy
   layers:
   - Default
   - TransparentFX

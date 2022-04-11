@@ -15,14 +15,16 @@ public class AI : MonoBehaviour {
     public bool waiting = false;
     public float moveDelay = 5;
     public Vector3 centerSearch;
+    public Vector3 talkingSearch;
     public AIState currentState;
     [HideInInspector] AIState nextState;
     public float huntSpeed = 5f;
     public float walkSpeed = 3f;
     public SoundController playerSound;
     public PlayerHealth playerHealth;
+    public bool playerTalking;
 
-    public enum AIState { Wander, Searching, Hunting }
+    public enum AIState { Wander, Searching, Hunting, Talking }
 
     protected void setState(AIState state)
     {
@@ -47,6 +49,10 @@ public class AI : MonoBehaviour {
             case AIState.Hunting:
                 Hunting();
                 break;
+
+            case AIState.Talking:
+                Talking();
+                break;
         }
     }
 
@@ -66,7 +72,12 @@ public class AI : MonoBehaviour {
     void Update() {
         distance = Vector3.Distance(target.position, transform.position);
 
-        if ((playerSound.inRange == true) && (playerSound.withinAttack == true))
+        if(playerTalking == true)
+        {
+            setState(AIState.Talking);
+        }
+
+        else if ((playerSound.inRange == true) && (playerSound.withinAttack == true))
         {
             setState(AIState.Hunting);
         }
@@ -81,6 +92,13 @@ public class AI : MonoBehaviour {
         }
 
         runState();
+    }
+
+    private void Talking()
+    {
+        agent.speed = 2f;
+        talkingSearch = target.position;
+        agent.SetDestination(talkingSearch);
     }
 
     private void Wander()
