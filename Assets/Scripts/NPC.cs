@@ -17,13 +17,17 @@ public class NPC : MonoBehaviour {
 
     [TextArea(5, 10)]
     public string[] sentences;
-    public GameObject player; 
-     
+    public GameObject player;
+    public GameObject enemy;
+    public AI playerTalking;
+
+
 
     void Start () {
         
         dialogueSystem = FindObjectOfType<DialogueSystem>();
         player = GameObject.FindWithTag("Player");
+        enemy = GameObject.FindWithTag("Enemy");
         
         
     }
@@ -54,6 +58,9 @@ public class NPC : MonoBehaviour {
                 FindObjectOfType<DialogueSystem>().NPCName();
                 //Debug.Log("its hit");
 
+                playerTalking = GameObject.Find("Enemy").GetComponent<AI>();
+                playerTalking.playerTalking = true;
+
                 FindObjectOfType<FirstPersonController>().MoveSpeed = 0.0f;
                 FindObjectOfType<FirstPersonController>().SprintSpeed = 0.0f;
                 FindObjectOfType<FirstPersonController>().RotationSpeed = 0.0f;
@@ -71,6 +78,8 @@ public class NPC : MonoBehaviour {
     {
         FindObjectOfType<DialogueSystem>().OutOfRange();
         this.gameObject.GetComponent<NPC>().enabled = false;
+
+        playerTalking.playerTalking = false;
 
         FindObjectOfType<FirstPersonController>().MoveSpeed = 4.0f;
         FindObjectOfType<FirstPersonController>().SprintSpeed = 6.0f;
