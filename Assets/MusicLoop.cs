@@ -8,6 +8,7 @@ public class MusicLoop : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        FindObjectOfType<AudioManager>().PlayIfOff("static");
         musicSource.PlayOneShot(musicStart);
         musicSource.PlayScheduled(AudioSettings.dspTime + musicStart.length);
     }
@@ -15,6 +16,5 @@ public class MusicLoop : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
     }
 }

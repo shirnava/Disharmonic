@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028331, g: 0.2257133, b: 0.3069217, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -12425,11 +12425,13 @@ MonoBehaviour:
   waiting: 0
   moveDelay: 5
   centerSearch: {x: 0, y: 0, z: 0}
+  talkingSearch: {x: 0, y: 0, z: 0}
   currentState: 0
   huntSpeed: 5
   walkSpeed: 3
   playerSound: {fileID: 0}
   playerHealth: {fileID: 0}
+  playerTalking: 0
 --- !u!54 &521593855
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -14375,7 +14377,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   musicSource: {fileID: 584236010}
-  musicStart: {fileID: 8300000, guid: 508f89e10900f8646b1cd39cbe93172f, type: 3}
+  musicStart: {fileID: 8300000, guid: 396a5b42d9fcb23468c6f8a9eec26319, type: 3}
 --- !u!82 &584236010
 AudioSource:
   m_ObjectHideFlags: 0
@@ -14386,7 +14388,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24300002, guid: 41d213742774b4afbaecdb79c34bcbfb, type: 2}
-  m_audioClip: {fileID: 8300000, guid: 054f2b171ef6e8c46aaab1eb91ae72fa, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 87af542cc96a6644c88d2446ae62a1d1, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.87
   m_Pitch: 1
@@ -18400,6 +18402,12 @@ MonoBehaviour:
     volume: 0.8
     pitch: 1
     loop: 0
+    source: {fileID: 0}
+  - name: static
+    clip: {fileID: 8300000, guid: 1d8f531c11f86634b83b0d6d5d1fe364, type: 3}
+    volume: 0.314
+    pitch: 1
+    loop: 1
     source: {fileID: 0}
 --- !u!4 &719289866
 Transform:
@@ -46292,6 +46300,7 @@ MonoBehaviour:
   player: {fileID: 0}
   ItHit: 0
   ItHitTestCube: 0
+  loadFromStation: 0
   theDest: {fileID: 893579134}
 --- !u!4 &1767910563 stripped
 Transform:

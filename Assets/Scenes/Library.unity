@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12731704, g: 0.13414727, b: 0.121078536, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2321,7 +2321,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   musicSource: {fileID: 249174115}
-  musicStart: {fileID: 8300000, guid: 23421ed11fed1764b9f4b13581efc652, type: 3}
+  musicStart: {fileID: 8300000, guid: ef8ba4c4942535c4fb799632435514c7, type: 3}
 --- !u!82 &249174115
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2332,7 +2332,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24300002, guid: 41d213742774b4afbaecdb79c34bcbfb, type: 2}
-  m_audioClip: {fileID: 8300000, guid: 492a8dac13e99444eaa18194fc932742, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 32acff642c9fbaa4381b8eef5200b979, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.87
   m_Pitch: 1
@@ -8103,11 +8103,13 @@ MonoBehaviour:
   waiting: 0
   moveDelay: 5
   centerSearch: {x: 0, y: 0, z: 0}
+  talkingSearch: {x: 0, y: 0, z: 0}
   currentState: 1
   huntSpeed: 5
   walkSpeed: 3
   playerSound: {fileID: 0}
   playerHealth: {fileID: 0}
+  playerTalking: 0
 --- !u!54 &824951069
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -16263,6 +16265,12 @@ MonoBehaviour:
     volume: 0.8
     pitch: 1
     loop: 0
+    source: {fileID: 0}
+  - name: static
+    clip: {fileID: 8300000, guid: 1d8f531c11f86634b83b0d6d5d1fe364, type: 3}
+    volume: 0.314
+    pitch: 1
+    loop: 1
     source: {fileID: 0}
 --- !u!4 &1728350846
 Transform:
