@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12731689, g: 0.13414702, b: 0.1210784, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -835,6 +835,12 @@ MonoBehaviour:
     volume: 0.8
     pitch: 1
     loop: 0
+    source: {fileID: 0}
+  - name: static
+    clip: {fileID: 8300000, guid: 1d8f531c11f86634b83b0d6d5d1fe364, type: 3}
+    volume: 0.314
+    pitch: 1
+    loop: 1
     source: {fileID: 0}
 --- !u!4 &111142692
 Transform:
@@ -8401,7 +8407,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   musicSource: {fileID: 980436588}
-  musicStart: {fileID: 8300000, guid: 508f89e10900f8646b1cd39cbe93172f, type: 3}
+  musicStart: {fileID: 8300000, guid: b9235cf0ae37f934593c20e48899033a, type: 3}
 --- !u!82 &980436588
 AudioSource:
   m_ObjectHideFlags: 0
@@ -8412,7 +8418,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24300002, guid: 41d213742774b4afbaecdb79c34bcbfb, type: 2}
-  m_audioClip: {fileID: 8300000, guid: 054f2b171ef6e8c46aaab1eb91ae72fa, type: 3}
+  m_audioClip: {fileID: 8300000, guid: a428fc2ce9cc6eb4fa023b903aac2434, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.87
   m_Pitch: 1
@@ -11123,7 +11129,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9005220659476430818, guid: 2d3a85ecde41a8246a79669975912b74, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.22222222
+      value: 0.22222224
       objectReference: {fileID: 0}
     - target: {fileID: 9005220659476430818, guid: 2d3a85ecde41a8246a79669975912b74, type: 3}
       propertyPath: m_LocalPosition.z
@@ -13484,11 +13490,13 @@ MonoBehaviour:
   waiting: 0
   moveDelay: 5
   centerSearch: {x: 0, y: 0, z: 0}
+  talkingSearch: {x: 0, y: 0, z: 0}
   currentState: 0
   huntSpeed: 5
   walkSpeed: 3
   playerSound: {fileID: 0}
   playerHealth: {fileID: 0}
+  playerTalking: 0
 --- !u!54 &1538951506
 Rigidbody:
   m_ObjectHideFlags: 0
