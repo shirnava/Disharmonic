@@ -19,7 +19,7 @@ public class NPC : MonoBehaviour {
     public string[] sentences;
     public GameObject player;
     public GameObject enemy;
-    public AI playerTalking;
+    public AI talk;
 
 
 
@@ -27,12 +27,10 @@ public class NPC : MonoBehaviour {
         
         dialogueSystem = FindObjectOfType<DialogueSystem>();
         player = GameObject.FindWithTag("Player");
-        enemy = GameObject.FindWithTag("Enemy");
-        
-        
+        talk = GameObject.Find("Enemy").GetComponent<AI>();
     }
-	
-	void Update () {
+
+    void Update () {
           Vector3 Pos = Camera.main.WorldToScreenPoint(NPCCharacter.position);
           Pos.y = 575;
           Pos.x = 575;
@@ -58,8 +56,7 @@ public class NPC : MonoBehaviour {
                 FindObjectOfType<DialogueSystem>().NPCName();
                 //Debug.Log("its hit");
 
-                playerTalking = GameObject.Find("Enemy").GetComponent<AI>();
-                playerTalking.playerTalking = true;
+                talk.playerTalking = true;
 
                 FindObjectOfType<FirstPersonController>().MoveSpeed = 0.0f;
                 FindObjectOfType<FirstPersonController>().SprintSpeed = 0.0f;
@@ -76,10 +73,10 @@ public class NPC : MonoBehaviour {
 
     public void OnTriggerExit()
     {
+        talk.playerTalking = false;
+
         FindObjectOfType<DialogueSystem>().OutOfRange();
         this.gameObject.GetComponent<NPC>().enabled = false;
-
-        playerTalking.playerTalking = false;
 
         FindObjectOfType<FirstPersonController>().MoveSpeed = 4.0f;
         FindObjectOfType<FirstPersonController>().SprintSpeed = 6.0f;

@@ -11,20 +11,23 @@ public class AI : MonoBehaviour {
     Transform target;
     NavMeshAgent agent;
     private Vector3 startPosition;
-    [Range(1, 5)] public float walkRadius;
+    [Range(1, 5)] public float walkRadius = 5;
     public bool waiting = false;
     public float moveDelay = 5;
     public Vector3 centerSearch;
     public Vector3 talkingSearch;
+    public Vector3 distractedSearch;
     public AIState currentState;
     [HideInInspector] AIState nextState;
     public float huntSpeed = 5f;
     public float walkSpeed = 3f;
+    public float distractedRange = 15f;
     public SoundController playerSound;
     public PlayerHealth playerHealth;
-    public bool playerTalking;
+    public DistractionSystem distraction;
+    public bool playerTalking = false;
 
-    public enum AIState { Wander, Searching, Hunting, Talking }
+    public enum AIState { Wander, Searching, Hunting, Talking, Distracted }
 
     protected void setState(AIState state)
     {
@@ -53,6 +56,10 @@ public class AI : MonoBehaviour {
             case AIState.Talking:
                 Talking();
                 break;
+
+            case AIState.Distracted:
+                Distracted();
+                break;
         }
     }
 
@@ -65,6 +72,7 @@ public class AI : MonoBehaviour {
         agent.SetDestination(RoamPosition());
         playerSound = GameObject.Find("PlayerCapsule").GetComponent<SoundController>();
         playerHealth = GameObject.Find("PlayerCapsule").GetComponent<PlayerHealth>();
+        distraction = GameObject.FindWithTag("TestThrowCube").GetComponent<DistractionSystem>();
 
     }
 
@@ -75,6 +83,11 @@ public class AI : MonoBehaviour {
         if(playerTalking == true)
         {
             setState(AIState.Talking);
+        }
+
+        else if ((distraction.noiseMade == true) && (Vector3.Distance(distraction.location, transform.position) <= distractedRange))
+        {
+            setState(AIState.Distracted);
         }
 
         else if ((playerSound.inRange == true) && (playerSound.withinAttack == true))
@@ -92,6 +105,14 @@ public class AI : MonoBehaviour {
         }
 
         runState();
+    }
+
+    private void Distracted()
+    {
+        agent.speed = walkSpeed;
+        distractedSearch = distraction.location;
+        agent.SetDestination(distractedSearch);
+        distraction.noiseMade = false;
     }
 
     private void Talking()
@@ -119,22 +140,23 @@ public class AI : MonoBehaviour {
 
     private void Hunting()
     {
-    float attackTime = 0;
-    float attackDelay = 10;
+    float attackTime = -9999;
+    float attackDelay = 10000;
 
     agent.speed = huntSpeed;
     agent.SetDestination(target.position);
 
         if (distance <= attackRadius)
         {
-            if (Time.time - attackTime < attackDelay)
-            {
-                return;
-            }
-            else
+            if (Time.time > (attackTime + attackDelay))
             {
                 playerHealth.currentHealth -= 50;
                 attackTime = Time.time;
+            }
+            else
+            {
+                return;
+                
             }
         }
 
