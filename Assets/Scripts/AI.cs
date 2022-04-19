@@ -148,16 +148,7 @@ public class AI : MonoBehaviour {
 
         if (distance <= attackRadius)
         {
-            if (Time.time > (attackTime + attackDelay))
-            {
-                playerHealth.currentHealth -= 50;
-                attackTime = Time.time;
-            }
-            else
-            {
-                return;
-                
-            }
+            playerHealth.takeDamage();
         }
 
     }
