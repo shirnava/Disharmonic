@@ -23,4 +23,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/School.unity
     guid: d79bbf409ff0d164ca620bfc160553bf
+  - enabled: 1
+    path: Assets/Scenes/DinerScene.unity
+    guid: 87d6ea142dc50466eaa3d569dc1dc6b7
+  - enabled: 1
+    path: Assets/Scenes/DinerOnly.unity
+    guid: e913e095776544cee8f2533effe860ba
+  - enabled: 1
+    path: Assets/Scenes/Library.unity
+    guid: 39ddb6adcc11c014b95fcb0d2f0e147e
+  - enabled: 1
+    path: Assets/Mauro Poggi Studio - Church/Church/ChurchScene.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/ChurchScene2.unity
+    guid: fce1ba036dcdea24285dd87597da4221
   m_configObjects: {}

@@ -12,9 +12,11 @@ public class EnemyManager : MonoBehaviour
     {
         instance = this;
     }
+   
 
     #endregion
 
     public GameObject enemy;
+    
 }
 

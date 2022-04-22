@@ -13,6 +13,7 @@ public class ThrowingObject : MonoBehaviour
 
     public int touchedButton = 0;
 
+
     void Start()
     {
       
@@ -21,6 +22,7 @@ public class ThrowingObject : MonoBehaviour
     void Update()
     {
 
+        //player = GameObject.FindWithTag("Player");
 
         float dist = Vector3.Distance(gameObject.transform.position, player.position);
         if (dist <= 2.5f)

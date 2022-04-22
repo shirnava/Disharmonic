@@ -10,6 +10,14 @@ TagManager:
   - NPC
   - TestThrowCube
   - Enemy
+  - MvScene
+  - Ddme
+  - EnemyMarker
+  - BallMarker
+  - PlayerMarker
+  - LibMarker
+  - Enemy2
+  - TheGameManager
   layers:
   - Default
   - TransparentFX

@@ -10,7 +10,16 @@ public class PlayerManager : MonoBehaviour
 
     void Awake()
     {
-        instance = this;
+        if(instance != null)
+        {
+            Debug.Log("The item not destroyed in PlayerManager is: " + gameObject);
+           // Destroy(gameObject);
+        }
+        else{
+           
+            instance = this;
+        }
+        //instance = this;
     }
 
     #endregion
