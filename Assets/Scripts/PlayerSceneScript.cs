@@ -22,6 +22,7 @@ public class PlayerSceneScript : MonoBehaviour
 
         DontDestroyOnLoad(instance);
     }
+    
 
     // Update is called once per frame
     void Update()

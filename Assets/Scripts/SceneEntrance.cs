@@ -45,10 +45,10 @@ public class SceneEntrance : MonoBehaviour
             {
                 Debug.Log("the transform position : " + transform.position + " the transform is: " + transform);
 
-                GameObject.FindWithTag("Player").transform.position = transform.position; // if its in the x,y,z of the map? 
-                GameObject.FindWithTag("CinemachineTarget").transform.position = transform.position;
-                GameObject.FindWithTag("Player").transform.eulerAngles = transform.eulerAngles;
-                GameObject.FindWithTag("CinemachineTarget").transform.eulerAngles = transform.eulerAngles;
+               GameObject.Find("PlayerCapsule").transform.position = transform.position; // if its in the x,y,z of the map? 
+                //GameObject.FindWithTag("CinemachineTarget").transform.position = transform.position;
+                GameObject.Find("PlayerCapsule").transform.eulerAngles = transform.eulerAngles;
+                //GameObject.FindWithTag("CinemachineTarget").transform.eulerAngles = transform.eulerAngles;
 
                 yield return new WaitForSeconds(2);
        
@@ -58,8 +58,6 @@ public class SceneEntrance : MonoBehaviour
                // GameObject.FindWithTag("Player").transform.position = transform.position;
 
                 Debug.Log("the player now position : " + GameObject.FindWithTag("Player").transform.position);
-
-                
 
                 yield return new WaitForSeconds(1);
 
