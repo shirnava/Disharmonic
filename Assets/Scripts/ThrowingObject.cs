@@ -16,7 +16,8 @@ public class ThrowingObject : MonoBehaviour
 
     void Start()
     {
-      
+    //   player = GameObject.Find("PlayerCapsule.");
+    //   playerCam = GameObject.Find("PlayerCameraRoot");
     }
 
     void Update()

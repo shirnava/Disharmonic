@@ -37,22 +37,19 @@ public class PlayerRaycasting : MonoBehaviour
                         player.transform.position = pos;
         }
         
-       // if(Physics.Raycast(this.transform.position, this.transform.forward, out whatIHit, distanceToSee) )
-         //       {       
-             try{
-if(whatIHit.collider.tag == null)
-                    {
-                    Debug.Log("its null");
+     
+        try
+        {
+            if(whatIHit.collider.tag == null)
+            {
+            Debug.Log("its null");
 
-                    }
-             }   
-             catch
-             {
-                                     //Debug.Log("its rly null");
-                                    // Debug.Log("it hit is: " + ItHit);
-                                     ItHit = false;
-
-             }         
+            }
+        }   
+        catch
+        {
+            ItHit = false;
+        }         
                     
                     
                     
@@ -89,32 +86,6 @@ if(whatIHit.collider.tag == null)
                     
                 
                 }  
-
-        //     if(whatIHit.collider.tag == "TestThrowCube")
-        //     {
-        //         //Debug.Log("I hit it here");
-        //         Cursor.visible = true;
-        // Cursor.lockState = CursorLockMode.None;
-        //         if (Input.GetMouseButtonDown(1))
-        //         {
-        //             Debug.Log("mouse click wored");
-        //             GetComponent<Collider>().enabled = false;
-        //             GetComponent<Rigidbody>().useGravity = false;
-        //             this.transform.position = theDest.position; 
-        //             this.transform.parent = GameObject.Find("Destination").transform;
-        //         }
-        //         // void OnMouseDown() 
-        //         // {
-                    
-
-        //         // }
-        //         //  void OnMouseUp() 
-        //         //     {
-        //         //         this.transform.parent = null;
-        //         //     GetComponent<BoxCollider>().enabled = true;
-        //         //     GetComponent<Rigidbody>().useGravity = true;
-        //         // }
-        //     }
                  
             if(Input.GetKeyDown (KeyCode.E)) 
             //if(Input.GetMouseButtonDown(0))
