@@ -93,6 +93,8 @@ public class TimeController : MonoBehaviour
         if(currentTime.ToString("HH:mm") == "23:30")
         {
             //Debug.Log("End of the day");
+            Destroy( GameObject.FindWithTag("Ddme"));
+            Destroy(GameObject.FindWithTag("TestThrowCube"));
             SceneManager.LoadScene("EndDayScreen");
         }
 
