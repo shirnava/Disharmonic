@@ -8,8 +8,9 @@ public class PlayerHealth : MonoBehaviour
     public float maxHealth = 100;
     public float currentHealth;
     public float damage = 50;
-    public float hitPause = 4f;
+    public float hitPause = 5f;
     public float hitCounter;
+    public bool attackDisabled = false;
 
     // Start is called before the first frame update
     void Start()
@@ -24,7 +25,12 @@ public class PlayerHealth : MonoBehaviour
         if (hitCounter > 0)
         {
             hitCounter -= Time.deltaTime;
+            attackDisabled = true;
 
+        }
+        if (hitCounter <= 0)
+        {
+            attackDisabled = false;
         }
     }
 
@@ -39,7 +45,7 @@ public class PlayerHealth : MonoBehaviour
 
                 if(currentHealth == 0)
                 {
-                    Destroy( GameObject.FindWithTag("Ddme"));
+                    Destroy(GameObject.FindWithTag("Ddme"));
                     Destroy(GameObject.FindWithTag("TestThrowCube"));
                     SceneManager.LoadScene("MainMenu");
                 }
