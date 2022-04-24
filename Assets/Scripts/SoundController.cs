@@ -29,10 +29,7 @@ public class SoundController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(target != null)
-        {
-
-        
+            target = EnemyManager.instance.enemy.transform;
             float distance = Vector3.Distance(target.position, transform.position);
 
             if (player.isRunning == true)
@@ -67,8 +64,7 @@ public class SoundController : MonoBehaviour
             {
                 inRange = false;
                 withinAttack = false;
-            }
-        }
+            }  
     }
 
     void OnDrawGizmosSelected()
