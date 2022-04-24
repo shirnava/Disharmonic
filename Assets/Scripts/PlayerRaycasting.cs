@@ -15,6 +15,7 @@ public class PlayerRaycasting : MonoBehaviour
     public bool loadFromStation = false;
 
     public Transform theDest;
+    [SerializeField] GameObject NoItemsText;
 
     
 
@@ -22,6 +23,7 @@ public class PlayerRaycasting : MonoBehaviour
     void Start()
     {
         player = GameObject.FindWithTag("Player");
+
     }
 
     // Update is called once per frame
@@ -95,22 +97,30 @@ public class PlayerRaycasting : MonoBehaviour
                 {                   
                     if (whatIHit.collider.gameObject.GetComponent<KeyCards>().whatKeyAmI == KeyCards.Keycards.redCard)
                     {
-                        
+                        InvManager.Instance.Add(whatIHit.collider.gameObject.GetComponent<ItemController>().Item);
                         player.GetComponent<Inventory>().hasRedKey = true;
                         Debug.Log("Grabbed Key which will now vanish: " + whatIHit.collider.gameObject.name);
                         Destroy (whatIHit.collider.gameObject);
+                        NoItemsText.gameObject.SetActive(false);
+                        InvManager.Instance.ListItems();
                     }
                     else if (whatIHit.collider.gameObject.GetComponent<KeyCards>().whatKeyAmI == KeyCards.Keycards.greenCard)
                     {
+                        InvManager.Instance.Add(whatIHit.collider.gameObject.GetComponent<ItemController>().Item);
                         player.GetComponent<Inventory>().hasGreenKey = true;
                         Debug.Log("Grabbed Key which will now vanish: " + whatIHit.collider.gameObject.name);
                         Destroy (whatIHit.collider.gameObject);
+                        NoItemsText.gameObject.SetActive(false);
+                        InvManager.Instance.ListItems();
                     }
                     else if (whatIHit.collider.gameObject.GetComponent<KeyCards>().whatKeyAmI == KeyCards.Keycards.blueCard)
                     {
+                        InvManager.Instance.Add(whatIHit.collider.gameObject.GetComponent<ItemController>().Item);
                         player.GetComponent<Inventory>().hasBlueKey = true;
                         Debug.Log("Grabbed Key which will now vanish: " + whatIHit.collider.gameObject.name);
                         Destroy (whatIHit.collider.gameObject);
+                        NoItemsText.gameObject.SetActive(false);
+                        InvManager.Instance.ListItems();
                     }
                 }    
                 if(whatIHit.collider.tag == "Doors")

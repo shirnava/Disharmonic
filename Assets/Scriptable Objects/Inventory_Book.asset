@@ -9,10 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f3516fa101d142588198aac30cddbe0, type: 3}
+  m_Script: {fileID: 11500000, guid: 8217f10a67aa14086b8e1ae73f6802c5, type: 3}
   m_Name: Inventory_Book
   m_EditorClassIdentifier: 
-  id: Inventory_Book
+  id: Book_Item
   displayName: Book
-  icon: {fileID: 0}
+  value: 0
+  icon: {fileID: 21300000, guid: 12aed8411ac7541c783cf0b9d46b5b1e, type: 3}
   prefab: {fileID: 1059599080716558, guid: dbc490f90759d724a8f076c4c8af84ea, type: 3}

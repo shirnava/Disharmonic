@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8217f10a67aa14086b8e1ae73f6802c5, type: 3}
+  m_Name: Inventory_BlueKey
+  m_EditorClassIdentifier: 
+  id: blue_key
+  displayName: Blue Key
+  value: 0
+  icon: {fileID: 21300000, guid: 45d54d91649ad411e8fd90c9d9758ed6, type: 3}
+  prefab: {fileID: 1307523325114642302, guid: 837ebed2847804ec4b3b3663bfc14ccf, type: 3}
