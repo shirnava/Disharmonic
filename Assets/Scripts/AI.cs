@@ -19,9 +19,10 @@ public class AI : MonoBehaviour {
     public Vector3 distractedSearch;
     public AIState currentState;
     [HideInInspector] AIState nextState;
-    public float huntSpeed = 5f;
-    public float walkSpeed = 3f;
-    public float distractedRange = 15f;
+    public float huntSpeed = 4f;
+    public float walkSpeed = 2.75f;
+    public float cooldownSpeed = 2f;
+    public float distractedRange = 25f;
     public SoundController playerSound;
     public PlayerHealth playerHealth;
     public DistractionSystem distraction;
@@ -143,7 +144,14 @@ public class AI : MonoBehaviour {
     float attackTime = -9999;
     float attackDelay = 10000;
 
-    agent.speed = huntSpeed;
+    if(playerHealth.attackDisabled == true)
+        {
+            agent.speed = cooldownSpeed;
+        }
+    else if(playerHealth.attackDisabled == false)
+        {
+            agent.speed = huntSpeed;
+        }
     agent.SetDestination(target.position);
 
         if (distance <= attackRadius)

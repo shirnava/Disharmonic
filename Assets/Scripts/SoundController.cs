@@ -7,9 +7,9 @@ public class SoundController : MonoBehaviour
 {
     private Vector3 startPosition;
     public float soundRadius;
-    public float attackRadius = 15f;
+    public float attackRadius = 13f;
     public float idleSound = 3f;
-    public float walkSound = 20f;
+    public float walkSound = 22f;
     public float runSound = 35f;
     public bool inRange;
     public bool withinAttack;
