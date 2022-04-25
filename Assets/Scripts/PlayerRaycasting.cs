@@ -121,6 +121,15 @@ public class PlayerRaycasting : MonoBehaviour
                         NoItemsText.gameObject.SetActive(false);
                         InvManager.Instance.ListItems();
                     }
+                     else if (whatIHit.collider.gameObject.GetComponent<KeyCards>().whatKeyAmI == KeyCards.Keycards.bookCard)
+                    {
+                        InvManager.Instance.Add(whatIHit.collider.gameObject.GetComponent<ItemController>().Item);
+                        player.GetComponent<Inventory>().hasBookKey = true;
+                        Debug.Log("Grabbed Key which will now vanish: " + whatIHit.collider.gameObject.name);
+                        Destroy (whatIHit.collider.gameObject);
+                        NoItemsText.gameObject.SetActive(false);
+                        InvManager.Instance.ListItems();
+                    }
                 }    
                 if(whatIHit.collider.tag == "Doors")
                 {                   

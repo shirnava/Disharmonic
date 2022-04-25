@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
-    public bool hasRedKey, hasBlueKey, hasGreenKey;
+    public bool hasRedKey, hasBlueKey, hasGreenKey, hasBookKey;
 
     // Start is called before the first frame update
     void Start()

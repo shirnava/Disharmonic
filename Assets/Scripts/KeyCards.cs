@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class KeyCards : MonoBehaviour
 {
-    public enum Keycards {redCard, greenCard, blueCard};
+    public enum Keycards {redCard, greenCard, blueCard, bookCard};
     public Keycards whatKeyAmI;
     // Start is called before the first frame update 
     void Start()

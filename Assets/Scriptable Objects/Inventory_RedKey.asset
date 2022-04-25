@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Inventory_RedKey
   m_EditorClassIdentifier: 
   id: RedKey
-  displayName: Red_Key
+  displayName: Red Key
   value: 0
   icon: {fileID: 21300000, guid: 79e08e6afe55847e9a53f092d28cd6f0, type: 3}
   prefab: {fileID: 170560, guid: cc5de5e674870ca479a40105f80555ad, type: 3}
