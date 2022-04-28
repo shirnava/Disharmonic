@@ -12,6 +12,7 @@ public class SceneEntrance : MonoBehaviour
     public bool playerMarker; 
     public bool libMarker;
     public GameObject player;
+
   
     IEnumerator waiter()
     {

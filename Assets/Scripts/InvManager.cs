@@ -10,11 +10,13 @@ public class InvManager : MonoBehaviour
 
     public Transform ItemContent;
     public GameObject InventoryItem;
+    [SerializeField] GameObject NoItemsText;
 
     // Start is called before the first frame update
     void Start()
     {
         Instance = this;
+        
     }
 
     public void Add(ItemData item)
@@ -25,6 +27,11 @@ public class InvManager : MonoBehaviour
     // Update is called once per frame
     public void ListItems()
     {
+
+        if(Items.Count==0)
+        {
+            NoItemsText.gameObject.SetActive(true);
+        }
         foreach(Transform item in ItemContent)
         {
             Destroy(item.gameObject);
