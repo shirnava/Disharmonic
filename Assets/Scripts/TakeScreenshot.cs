@@ -37,6 +37,6 @@ public class TakeScreenshot : MonoBehaviour
         }
         byte[] bytes = sshot.EncodeToPNG();
         System.IO.File.WriteAllBytes(pathFolder, bytes);
-        AssetDatabase.Refresh();
+        // AssetDatabase.Refresh();
     }
 }
