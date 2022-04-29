@@ -26,8 +26,11 @@ public class SceneEntrance : MonoBehaviour
         //         GameObject.FindWithTag("TestThrowCube").transform.eulerAngles = GameObject.FindWithTag("BallMarker").transform.eulerAngles;     
         //     }
         // }
+        // if (PersistantState.Instance != null && PersistantState.Instance.data != null) {
+        //     Debug.Log("PersistantState: " + PersistantState.Instance.data);
+        // }
         
-        if(PlayerPrefs.GetString("LastExitName") == lastExitName)
+        if(PersistantState.Instance.data == lastExitName)
         {
             GameObject.Find("GameManager").GetComponent<EnemyManager>().enemy = GameObject.FindWithTag("Enemy");
             if (enemyMarker == true)
@@ -46,19 +49,19 @@ public class SceneEntrance : MonoBehaviour
             {
                 Debug.Log("the transform position : " + transform.position + " the transform is: " + transform);
 
-                GameObject.FindWithTag("Player").transform.position = transform.position; // if its in the x,y,z of the map? 
+                GameObject.Find("PlayerCapsule").transform.position = transform.position; // if its in the x,y,z of the map? 
                 
                 yield return new WaitForSeconds(0.001f);
        
                 Debug.Log("in trigger");
-                Debug.Log("The player is: " + GameObject.FindWithTag("Player"));
+                Debug.Log("The player is: " + GameObject.Find("PlayerCapsule"));
 
-                GameObject.FindWithTag("Player").transform.position = transform.position;
+                GameObject.Find("PlayerCapsule").transform.position = transform.position;
 
-                Debug.Log("the player now position : " + GameObject.FindWithTag("Player").transform.position);
+                Debug.Log("the player now position : " + GameObject.Find("PlayerCapsule").transform.position);
 
                 GameObject.FindWithTag("CinemachineTarget").transform.position = transform.position;
-                GameObject.FindWithTag("Player").transform.eulerAngles = transform.eulerAngles;
+                GameObject.Find("PlayerCapsule").transform.eulerAngles = transform.eulerAngles;
                 GameObject.FindWithTag("CinemachineTarget").transform.eulerAngles = transform.eulerAngles;
 
                 yield return new WaitForSeconds(1);
@@ -71,7 +74,7 @@ public class SceneEntrance : MonoBehaviour
     
     void Start()
     {
-        player = GameObject.FindWithTag("Player");
+        player = GameObject.Find("PlayerCapsule");
         
         StartCoroutine(waiter());
     }

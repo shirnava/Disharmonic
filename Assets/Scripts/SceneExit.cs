@@ -12,7 +12,10 @@ public class SceneExit : MonoBehaviour
     {
         if(other.gameObject.CompareTag("Player"))
         {
-            PlayerPrefs.SetString("LastExitName", exitName);
+            // PlayerPrefs.SetString("LastExitName", exitName);
+            if (PersistantState.Instance) {
+                PersistantState.Instance.data = exitName;
+            }
             SceneManager.LoadScene(sceneToLoad);
         }
         
