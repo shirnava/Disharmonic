@@ -5,6 +5,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
 
+
 public class TimeController : MonoBehaviour
 {
     [SerializeField]
@@ -68,6 +69,8 @@ public class TimeController : MonoBehaviour
 
         sunriseTime = TimeSpan.FromHours(sunriseHour);
         sunsetTime = TimeSpan.FromHours(sunsetHour);
+
+        //sunLight = RenderSettings.sun;
     }
 
     // Update is called once per frame
@@ -106,6 +109,8 @@ public class TimeController : MonoBehaviour
     {
         float sunLightRotation;
         float moonLightRotation;
+
+
 
         //if daytime
         if (currentTime.TimeOfDay > sunriseTime && currentTime.TimeOfDay < sunsetTime)

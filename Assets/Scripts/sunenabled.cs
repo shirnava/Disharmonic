@@ -21,9 +21,11 @@ public class sunenabled : MonoBehaviour
         {
             sunLight.SetActive(false);
         }
-        if (currentScene == "Town")
+        if (currentScene == "TownLeavingPoliceStation")
         {
             sunLight.SetActive(true); 
         } 
+
+        
     }
 }

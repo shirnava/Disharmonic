@@ -18,6 +18,7 @@ TagManager:
   - LibMarker
   - Enemy2
   - TheGameManager
+  - sun
   layers:
   - Default
   - TransparentFX

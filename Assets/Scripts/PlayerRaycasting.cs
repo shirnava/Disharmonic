@@ -154,22 +154,27 @@ public class PlayerRaycasting : MonoBehaviour
                         // Debug.Log("look: " + player.transform.position.x);
                         SceneManager.LoadScene("PoliceStation", LoadSceneMode.Single);
                     }
+                    else if (whatIHit.collider.gameObject.GetComponent<DoorManager>().whatDoorAmI == DoorManager.Doors.insidePoliceStationDoor)
+                    {
+                        // Debug.Log("look: " + player.transform.position.x);
+                        SceneManager.LoadScene("TownLeavingPoliceStation", LoadSceneMode.Single);
+                    }
                     else if (whatIHit.collider.gameObject.GetComponent<DoorManager>().whatDoorAmI == DoorManager.Doors.schoolDoor)
                     {
                         // Debug.Log("look: " + player.transform.position.x);
                         SceneManager.LoadScene("School", LoadSceneMode.Single);
                     }
-                     else if (whatIHit.collider.gameObject.GetComponent<DoorManager>().whatDoorAmI == DoorManager.Doors.insidePoliceStationDoor)
-                    {
-                        Vector3 pos = transform.position;
-                        pos.x = 275.73f;
-                        player.transform.position = pos;
-                        loadFromStation = true;
-                        SceneManager.LoadScene("Town", LoadSceneMode.Single);
+                    //  else if (whatIHit.collider.gameObject.GetComponent<DoorManager>().whatDoorAmI == DoorManager.Doors.insidePoliceStationDoor)
+                    // {
+                    //     Vector3 pos = transform.position;
+                    //     pos.x = 275.73f;
+                    //     player.transform.position = pos;
+                    //     loadFromStation = true;
+                    //     SceneManager.LoadScene("Town", LoadSceneMode.Single);
                          
                          
-                        //  player.transform.position.x = new Vector3(275.23f, 0, 0);
-                    }
+                    //     //  player.transform.position.x = new Vector3(275.23f, 0, 0);
+                    // }
                     else if (whatIHit.collider.gameObject.GetComponent<DoorManager>().whatDoorAmI == DoorManager.Doors.greenDoor)
                     {
                         if (player.GetComponent<Inventory>().hasGreenKey == true)
