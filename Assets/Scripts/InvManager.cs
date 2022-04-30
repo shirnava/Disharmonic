@@ -32,6 +32,10 @@ public class InvManager : MonoBehaviour
         {
             NoItemsText.gameObject.SetActive(true);
         }
+        else
+        {
+            NoItemsText.gameObject.SetActive(false);
+        }
         foreach(Transform item in ItemContent)
         {
             Destroy(item.gameObject);
