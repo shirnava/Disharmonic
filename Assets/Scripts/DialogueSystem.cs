@@ -98,6 +98,7 @@ public class DialogueSystem: MonoBehaviour {
                 // Maybe put outside while loop? Test more if this causes a bug
                 if(Input.GetKeyDown(KeyCode.R))
                 {
+                    stopTalking();
                     //Debug.Log("IT IS  R");
 
                     dialogueEnded = false;
@@ -118,6 +119,7 @@ public class DialogueSystem: MonoBehaviour {
 
                 if(Input.GetKeyDown(KeyCode.R))
                 {
+                    stopTalking();
                     //Debug.Log("IT IS  R");
 
                     dialogueEnded = false;
@@ -151,18 +153,18 @@ public class DialogueSystem: MonoBehaviour {
                     if (Input.GetKey(DialogueInput))
                     {
                         yield return new WaitForSeconds(letterDelay * letterMultiplier);
-
-                        if (audioClip) audioSource.PlayOneShot(audioClip, 0.5F);
+                        playTalking();
                     }
                     else
                     {
                         yield return new WaitForSeconds(letterDelay);
+                        playTalking();
 
-                        if (audioClip) audioSource.PlayOneShot(audioClip, 0.5F);
                     }
                 }
                 else
                 {
+                    stopTalking();
                     dialogueEnded = false;
                     break;
                 }
@@ -183,6 +185,7 @@ public class DialogueSystem: MonoBehaviour {
 
     public void DropDialogue()
     {       
+        stopTalking();
         //dialogueGUI.SetActive(false);
         // Debug.Log("Dropping Dialogue!");
         FindObjectOfType<FirstPersonController>().MoveSpeed = 4.0f;
@@ -194,6 +197,7 @@ public class DialogueSystem: MonoBehaviour {
 
     public void OutOfRange()
     {
+        stopTalking();
         outOfRange = true;
         if (outOfRange == true)
         {
@@ -203,6 +207,38 @@ public class DialogueSystem: MonoBehaviour {
             StopAllCoroutines();
             //dialogueGUI.SetActive(false);
             dialogueBoxGUI.gameObject.SetActive(false);
+        }
+    }
+
+    public void playTalking()
+    {
+        switch (nameText.text)
+        {
+        case "Sarah (Police Deputy)":
+            FindObjectOfType<AudioManager>().Play("TalkHigh");
+            break;
+        case "Lilith (Gravekeeper)":
+            FindObjectOfType<AudioManager>().Play("TalkMedium");
+            break;
+        default:
+            FindObjectOfType<AudioManager>().Play("TalkLow");
+            break;
+        }
+    }
+
+    public void stopTalking()
+    {
+        switch (nameText.text)
+        {
+        case "Sarah (Police Deputy)":
+            FindObjectOfType<AudioManager>().Stop("TalkHigh");
+            break;
+        case "Lilith (Gravekeeper)":
+            FindObjectOfType<AudioManager>().Stop("TalkMedium");
+            break;
+        default:
+            FindObjectOfType<AudioManager>().Stop("TalkLow");
+            break;
         }
     }
 }

@@ -65,6 +65,7 @@ public class ThrowingObject : MonoBehaviour
                      hasPlayer = false;
                      touchedButton = 0;
                     GetComponent<Rigidbody>().AddForce(playerCam.forward * throwForce);
+                    FindObjectOfType<AudioManager>().Play("throw");
                 }
                 else if (Input.GetMouseButtonDown(1) && touchedButton == 2)
                 {
@@ -75,6 +76,7 @@ public class ThrowingObject : MonoBehaviour
                     hasPlayer = false;
                      GetComponent<Rigidbody>().AddForce(playerCam.forward * 0);
                      touchedButton = 0;
+                    FindObjectOfType<AudioManager>().Play("throw");
                 }
             }
         }
