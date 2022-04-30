@@ -23,7 +23,10 @@ public class InventoryToggle : MonoBehaviour
             {
                  InventoryWindow.gameObject.SetActive(true);
                  isActive = true;
-
+                
+                 if(!NoItemsText){
+                    Debug.Log("no items text is null!");
+                 }
                  if(InvManager.Instance.Items.Count==0)
                  {
                     NoItemsText.gameObject.SetActive(true);

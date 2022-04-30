@@ -15,7 +15,7 @@ public class PlayerRaycasting : MonoBehaviour
     public bool loadFromStation = false;
 
     public Transform theDest;
-    [SerializeField] GameObject NoItemsText;
+   
 
     
 
@@ -100,7 +100,6 @@ public class PlayerRaycasting : MonoBehaviour
                         player.GetComponent<Inventory>().hasRedKey = true;
                         Debug.Log("Grabbed Key which will now vanish: " + whatIHit.collider.gameObject.name);
                         Destroy (whatIHit.collider.gameObject);
-                        NoItemsText.gameObject.SetActive(false);
                         InvManager.Instance.ListItems();
                     }
                     else if (whatIHit.collider.gameObject.GetComponent<KeyCards>().whatKeyAmI == KeyCards.Keycards.greenCard)
@@ -109,7 +108,6 @@ public class PlayerRaycasting : MonoBehaviour
                         player.GetComponent<Inventory>().hasGreenKey = true;
                         Debug.Log("Grabbed Key which will now vanish: " + whatIHit.collider.gameObject.name);
                         Destroy (whatIHit.collider.gameObject);
-                        NoItemsText.gameObject.SetActive(false);
                         InvManager.Instance.ListItems();
                     }
                     else if (whatIHit.collider.gameObject.GetComponent<KeyCards>().whatKeyAmI == KeyCards.Keycards.blueCard)
@@ -118,7 +116,6 @@ public class PlayerRaycasting : MonoBehaviour
                         player.GetComponent<Inventory>().hasBlueKey = true;
                         Debug.Log("Grabbed Key which will now vanish: " + whatIHit.collider.gameObject.name);
                         Destroy (whatIHit.collider.gameObject);
-                        NoItemsText.gameObject.SetActive(false);
                         InvManager.Instance.ListItems();
                     }
                      else if (whatIHit.collider.gameObject.GetComponent<KeyCards>().whatKeyAmI == KeyCards.Keycards.bookCard)
@@ -127,7 +124,6 @@ public class PlayerRaycasting : MonoBehaviour
                         player.GetComponent<Inventory>().hasBookKey = true;
                         Debug.Log("Grabbed Key which will now vanish: " + whatIHit.collider.gameObject.name);
                         Destroy (whatIHit.collider.gameObject);
-                        NoItemsText.gameObject.SetActive(false);
                         InvManager.Instance.ListItems();
                     }
                 }    
