@@ -813,7 +813,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &110424109
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12177,7 +12177,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1253846015
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14437,6 +14437,7 @@ MonoBehaviour:
   currentState: 0
   huntSpeed: 5
   walkSpeed: 3
+  cooldownSpeed: 2
   distractedRange: 15
   playerSound: {fileID: 0}
   playerHealth: {fileID: 0}
@@ -19841,6 +19842,7 @@ MonoBehaviour:
   damage: 50
   hitPause: 4
   hitCounter: 0
+  attackDisabled: 0
 --- !u!114 &2124426887
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19869,6 +19871,7 @@ MonoBehaviour:
   hasRedKey: 0
   hasBlueKey: 0
   hasGreenKey: 0
+  hasBookKey: 0
 --- !u!1001 &2127792759
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -160,6 +160,16 @@ public class PlayerRaycasting : MonoBehaviour
                         // Debug.Log("look: " + player.transform.position.x);
                         SceneManager.LoadScene("School", LoadSceneMode.Single);
                     }
+                    else if (whatIHit.collider.gameObject.GetComponent<DoorManager>().whatDoorAmI == DoorManager.Doors.churchDoor)
+                    {
+                        // Debug.Log("look: " + player.transform.position.x);
+                        SceneManager.LoadScene("ChurchScene2", LoadSceneMode.Single);
+                    }
+                    else if (whatIHit.collider.gameObject.GetComponent<DoorManager>().whatDoorAmI == DoorManager.Doors.libraryDoor)
+                    {
+                        // Debug.Log("look: " + player.transform.position.x);
+                        SceneManager.LoadScene("Library", LoadSceneMode.Single);
+                    }
                     //  else if (whatIHit.collider.gameObject.GetComponent<DoorManager>().whatDoorAmI == DoorManager.Doors.insidePoliceStationDoor)
                     // {
                     //     Vector3 pos = transform.position;
