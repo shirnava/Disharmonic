@@ -42,6 +42,7 @@ public class PlayerHealth : MonoBehaviour
             {
                 currentHealth -= damage;
                 hitCounter = hitPause;
+                FindObjectOfType<AudioManager>().Play("spirit");
 
                 if(currentHealth == 0)
                 {
