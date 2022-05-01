@@ -1822,8 +1822,8 @@ MonoBehaviour:
   NPCCharacter: {fileID: 490837523}
   Name: Priest (Priest)
   sentences:
-  - "I\u2019m unaware of the \ncircumstances surrounding Homeless Person\u2019s \npassing
-    last night. "
+  - "I\u2019m unaware of the \ncircumstances surrounding\nHomeless Person\u2019s
+    \npassing last night. "
   - You may ask someone else.
   player: {fileID: 0}
   enemy: {fileID: 0}
@@ -6358,7 +6358,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1684725080
 MonoBehaviour:
   m_ObjectHideFlags: 0
