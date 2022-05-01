@@ -27,6 +27,7 @@ public class AI : MonoBehaviour {
     public PlayerHealth playerHealth;
     public DistractionSystem distraction;
     public bool playerTalking = false;
+    public int waitTime; 
 
     public enum AIState { Wander, Searching, Hunting, Talking, Distracted }
 
@@ -67,6 +68,14 @@ public class AI : MonoBehaviour {
 
     // Start is called before the first frame update
     void Start() {
+        StartCoroutine(waiter());
+       
+    }
+
+    IEnumerator waiter()
+    {
+        yield return new WaitForSeconds(waitTime);
+
         FindObjectOfType<AudioManager>().PlayIfOff("static");
         startPosition = transform.position;
         target = PlayerManager.instance.player.transform;
@@ -74,12 +83,15 @@ public class AI : MonoBehaviour {
         agent.SetDestination(RoamPosition());
         playerSound = GameObject.Find("PlayerCapsule").GetComponent<SoundController>();
         playerHealth = GameObject.Find("PlayerCapsule").GetComponent<PlayerHealth>();
-        distraction = GameObject.FindWithTag("ThrowableObject").GetComponent<DistractionSystem>();
-
+        distraction = GameObject.FindWithTag("ThrowableObject").GetComponent<DistractionSystem>(); 
     }
-
+    
     // Update is called once per frame
     void Update() {
+        if(target != null)
+        {
+
+        
         distance = Vector3.Distance(target.position, transform.position);
 
         if(playerTalking == true)
@@ -113,6 +125,7 @@ public class AI : MonoBehaviour {
         }
 
         runState();
+        }
     }
 
     private void Distracted()

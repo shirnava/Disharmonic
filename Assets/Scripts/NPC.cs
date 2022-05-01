@@ -72,14 +72,10 @@ public class NPC : MonoBehaviour {
                     talk.playerTalking = true;
                 }
                
-
                 FindObjectOfType<FirstPersonController>().MoveSpeed = 0.0f;
                 FindObjectOfType<FirstPersonController>().SprintSpeed = 0.0f;
                 FindObjectOfType<FirstPersonController>().RotationSpeed = 0.0f;
                 FindObjectOfType<FirstPersonController>().SpeedChangeRate = 0.0f;
-
-               
-
             }
             
         }
