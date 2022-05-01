@@ -149,6 +149,11 @@ public class PlayerRaycasting : MonoBehaviour
                       
                         SceneManager.LoadScene("PoliceStation", LoadSceneMode.Single);
                     }
+                    else if (whatIHit.collider.gameObject.GetComponent<DoorManager>().whatDoorAmI == DoorManager.Doors.policeStationDoor2)
+                    {
+                      
+                        SceneManager.LoadScene("PoliceStation2", LoadSceneMode.Single);
+                    }
                     else if (whatIHit.collider.gameObject.GetComponent<DoorManager>().whatDoorAmI == DoorManager.Doors.insidePoliceStationDoor)
                     {
                      
@@ -163,9 +168,13 @@ public class PlayerRaycasting : MonoBehaviour
                     {
                         SceneManager.LoadScene("ChurchScene2", LoadSceneMode.Single);
                     }
-                    else if (whatIHit.collider.gameObject.GetComponent<DoorManager>().whatDoorAmI == DoorManager.Doors.libraryDoorF)
+                    else if (whatIHit.collider.gameObject.GetComponent<DoorManager>().whatDoorAmI == DoorManager.Doors.libraryDoor)
                     {                      
                         SceneManager.LoadScene("Library", LoadSceneMode.Single);
+                    }
+                    else if (whatIHit.collider.gameObject.GetComponent<DoorManager>().whatDoorAmI == DoorManager.Doors.libraryDoor2)
+                    {                      
+                        SceneManager.LoadScene("Library2", LoadSceneMode.Single);
                     }
                     else if (whatIHit.collider.gameObject.GetComponent<DoorManager>().whatDoorAmI == DoorManager.Doors.dinerDoor)
                     {                      
