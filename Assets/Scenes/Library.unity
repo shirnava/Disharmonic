@@ -19026,7 +19026,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1975457108487340, guid: ec3e8f3ed27e2244caaedaf589590a03, type: 3}
       propertyPath: m_TagString
-      value: TestThrowCube
+      value: ThrowableObject
       objectReference: {fileID: 0}
     - target: {fileID: 4935240531098310, guid: ec3e8f3ed27e2244caaedaf589590a03, type: 3}
       propertyPath: m_RootOrder

@@ -5,7 +5,7 @@ using UnityEngine;
 public class DoorManager : MonoBehaviour
 {
     public enum Doors {redDoor, greenDoor, blueDoor, policeStationDoor, insidePoliceStationDoor, 
-                        churchDoor, schoolDoor, libraryDoor};
+                        churchDoor, schoolDoor, libraryDoor, dinerDoor};
     public Doors whatDoorAmI;
     // Start is called before the first frame update
     void Start()

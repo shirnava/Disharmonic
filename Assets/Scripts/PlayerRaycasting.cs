@@ -147,17 +147,17 @@ public class PlayerRaycasting : MonoBehaviour
                     } 
                     else if (whatIHit.collider.gameObject.GetComponent<DoorManager>().whatDoorAmI == DoorManager.Doors.policeStationDoor)
                     {
-                        // Debug.Log("look: " + player.transform.position.x);
+                      
                         SceneManager.LoadScene("PoliceStation", LoadSceneMode.Single);
                     }
                     else if (whatIHit.collider.gameObject.GetComponent<DoorManager>().whatDoorAmI == DoorManager.Doors.insidePoliceStationDoor)
                     {
-                        // Debug.Log("look: " + player.transform.position.x);
+                     
                         SceneManager.LoadScene("TownLeavingPoliceStation", LoadSceneMode.Single);
                     }
                     else if (whatIHit.collider.gameObject.GetComponent<DoorManager>().whatDoorAmI == DoorManager.Doors.schoolDoor)
                     {
-                        // Debug.Log("look: " + player.transform.position.x);
+                      
                         SceneManager.LoadScene("School", LoadSceneMode.Single);
                     }
                     else if (whatIHit.collider.gameObject.GetComponent<DoorManager>().whatDoorAmI == DoorManager.Doors.churchDoor)
@@ -167,6 +167,10 @@ public class PlayerRaycasting : MonoBehaviour
                     else if (whatIHit.collider.gameObject.GetComponent<DoorManager>().whatDoorAmI == DoorManager.Doors.libraryDoor)
                     {                      
                         SceneManager.LoadScene("Library", LoadSceneMode.Single);
+                    }
+                    else if (whatIHit.collider.gameObject.GetComponent<DoorManager>().whatDoorAmI == DoorManager.Doors.dinerDoor)
+                    {                      
+                        SceneManager.LoadScene("DinerOnly", LoadSceneMode.Single);
                     }
                     else if (whatIHit.collider.gameObject.GetComponent<DoorManager>().whatDoorAmI == DoorManager.Doors.greenDoor)
                     {
