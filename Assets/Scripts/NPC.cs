@@ -27,14 +27,23 @@ public class NPC : MonoBehaviour {
         
         dialogueSystem = FindObjectOfType<DialogueSystem>();
         player = GameObject.FindWithTag("Player");
-        talk = GameObject.Find("Enemy").GetComponent<AI>();
+        if(GameObject.Find("Enemy") != null)
+        {
+            talk = GameObject.Find("Enemy").GetComponent<AI>();
+        }
+       
     }
 
     void Update () {
-          Vector3 Pos = Camera.main.WorldToScreenPoint(NPCCharacter.position);
-          Pos.y = 575;
-          Pos.x = 575;
-          ChatBackGround.position = Pos;
+        if(GameObject.Find("Enemy") != null)
+        {
+            talk = GameObject.Find("Enemy").GetComponent<AI>();
+        }
+        
+        Vector3 Pos = Camera.main.WorldToScreenPoint(NPCCharacter.position);
+        Pos.y = 575;
+        Pos.x = 575;
+        ChatBackGround.position = Pos;
           
     }
 
@@ -56,7 +65,11 @@ public class NPC : MonoBehaviour {
                 FindObjectOfType<DialogueSystem>().NPCName();
                 //Debug.Log("its hit");
 
-                talk.playerTalking = true;
+                if(talk != null)
+                {
+                    talk.playerTalking = true;
+                }
+               
 
                 FindObjectOfType<FirstPersonController>().MoveSpeed = 0.0f;
                 FindObjectOfType<FirstPersonController>().SprintSpeed = 0.0f;
@@ -72,8 +85,11 @@ public class NPC : MonoBehaviour {
     }
 
     public void OnTriggerExit()
-    {
-        talk.playerTalking = false;
+    {  
+        if(talk != null)
+        {
+            talk.playerTalking = false;
+        }
 
         FindObjectOfType<DialogueSystem>().OutOfRange();
         this.gameObject.GetComponent<NPC>().enabled = false;
