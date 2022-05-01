@@ -73,7 +73,7 @@ public class AI : MonoBehaviour {
         agent.SetDestination(RoamPosition());
         playerSound = GameObject.Find("PlayerCapsule").GetComponent<SoundController>();
         playerHealth = GameObject.Find("PlayerCapsule").GetComponent<PlayerHealth>();
-        distraction = GameObject.FindWithTag("TestThrowCube").GetComponent<DistractionSystem>();
+        distraction = GameObject.FindWithTag("ThrowableObject").GetComponent<DistractionSystem>();
 
     }
 
