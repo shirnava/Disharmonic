@@ -14,6 +14,7 @@ public class NPC : MonoBehaviour {
     private DialogueSystem dialogueSystem;
 
     public string Name;
+    public Sprite pict;
 
     [TextArea(5, 10)]
     public string[] sentences;
@@ -62,6 +63,7 @@ public class NPC : MonoBehaviour {
                 this.gameObject.GetComponent<NPC>().enabled = true;
                 dialogueSystem.Names = Name;
                 dialogueSystem.dialogueLines = sentences;
+                dialogueSystem.spr = pict;
                 FindObjectOfType<DialogueSystem>().NPCName();
                 //Debug.Log("its hit");
 
