@@ -16354,7 +16354,7 @@ MonoBehaviour:
   playerHealth: {fileID: 0}
   distraction: {fileID: 0}
   playerTalking: 0
-  waitTime: 0
+  waitTime: 20
 --- !u!54 &600895090
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -16464,7 +16464,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 600895086}
   m_LocalRotation: {x: -0, y: -0.45134607, z: -0, w: 0.892349}
-  m_LocalPosition: {x: -3.4613, y: 1.11, z: 33.359}
+  m_LocalPosition: {x: 13.37, y: 1.11, z: 20.18}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 55458841}

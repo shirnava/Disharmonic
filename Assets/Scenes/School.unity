@@ -1119,7 +1119,7 @@ GameObject:
   - component: {fileID: 98826425}
   - component: {fileID: 98826424}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: EnemyWall1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3553,7 +3553,7 @@ GameObject:
   - component: {fileID: 284033875}
   - component: {fileID: 284033874}
   m_Layer: 0
-  m_Name: Cube (1)
+  m_Name: EnemyWall2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

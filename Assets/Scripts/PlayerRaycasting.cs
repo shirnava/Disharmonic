@@ -137,8 +137,7 @@ public class PlayerRaycasting : MonoBehaviour
                             Debug.Log("Clicked on the door will be destroyed: " + whatIHit.collider.gameObject.name);
                             Destroy (whatIHit.collider.gameObject);
                             
-                             SceneManager.LoadScene("Town", LoadSceneMode.Single);
-                             
+                             SceneManager.LoadScene("Town", LoadSceneMode.Single);                            
                         }
                         else
                         {
