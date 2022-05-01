@@ -19575,7 +19575,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1800, y: 1600}
@@ -34951,7 +34951,7 @@ MonoBehaviour:
   ChatBackGround: {fileID: 1449567060}
   NPCCharacter: {fileID: 2130141824}
   Name: Clara (Waitress)
-  pict: {fileID: 0}
+  pict: {fileID: 21300000, guid: ad98b07492f45f7429c160683b6e1859, type: 3}
   sentences:
   - Here for a cuppa, love?
   - "... Last night? Yeah. Real \nshame, that one. Too bad."

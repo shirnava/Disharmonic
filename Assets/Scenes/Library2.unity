@@ -920,7 +920,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1800, y: 1600}
@@ -21336,7 +21336,7 @@ MonoBehaviour:
   ChatBackGround: {fileID: 1975568025}
   NPCCharacter: {fileID: 1568126739}
   Name: Sarah (Police Deputy)
-  pict: {fileID: 0}
+  pict: {fileID: 21300000, guid: 9941e0e30c02dcf498dd18701f7fc104, type: 3}
   sentences:
   - "\u201CPsst. Hey. You. Yeah, \nyou! Can you help me?!"
   - "I\u2019ve got a problem. I need \na\u2026 book, okay? I just don\u2019t \nwant\u2026

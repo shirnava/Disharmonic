@@ -9645,7 +9645,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1800, y: 1600}
@@ -10012,7 +10012,7 @@ MonoBehaviour:
   ChatBackGround: {fileID: 1790861324}
   NPCCharacter: {fileID: 798591349}
   Name: Teacher
-  pict: {fileID: 0}
+  pict: {fileID: 21300000, guid: c1d36f448e6634948bb8f30d14fdc108, type: 3}
   sentences:
   - "Are you looking for older student? \nThey went with their mother to the \nlibrary
     to check for a book a while \nago."
@@ -26248,7 +26248,7 @@ MonoBehaviour:
   ChatBackGround: {fileID: 1790861324}
   NPCCharacter: {fileID: 2141241590}
   Name: Younger Student
-  pict: {fileID: 0}
+  pict: {fileID: 21300000, guid: 1dd2e284bd9227a4d840e1c38492294a, type: 3}
   sentences:
   - "... A-Agh! \u2026 I-I-I-I\u2026 H-H-Hello! \nM-M-My name is [NAME]!"
   - "M-M-My momma told me I hafta \nbe polite! E-E-Even if\u2026 t-t-t-t-\nthat stinky
