@@ -11,6 +11,7 @@ public class InvManager : MonoBehaviour
     public Transform ItemContent;
     public GameObject InventoryItem;
     [SerializeField] GameObject NoItemsText;
+    public bool hasWonFirstDay, hasWonSecondDay, hasWonThirdDay = false;
 
     // Start is called before the first frame update
     void Start()
