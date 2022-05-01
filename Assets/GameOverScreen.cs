@@ -9,7 +9,6 @@ public class GameOverScreen : MonoBehaviour
   [SerializeField] GameObject Correct;
   [SerializeField] GameObject Incorrect;
   [SerializeField] GameObject Choose;
-  public int day=1;
   public bool done=false;
 
   public void Setup()
@@ -28,6 +27,7 @@ public class GameOverScreen : MonoBehaviour
           if (Input.anyKey)
           {
           RestartButton();
+          done=false;
           }
         }
        
@@ -45,20 +45,23 @@ public class GameOverScreen : MonoBehaviour
     Choose.gameObject.SetActive(false);
     Correct.gameObject.SetActive(true);
 
-    if(day==1)
+    if(InvManager.Instance.day==1)
     {
       InvManager.Instance.hasWonFirstDay = true;
     }
-    if(day==2)
+    if(InvManager.Instance.day==2)
     {
       InvManager.Instance.hasWonSecondDay = true;
     }
-    if(day==3)
+    if(InvManager.Instance.day==3)
     {
       InvManager.Instance.hasWonThirdDay = true;
     }
-    day=day+1;
 
+    //increment day by one
+    InvManager.Instance.day=InvManager.Instance.day+1;
+
+    //toggle boolean to indicate user can now leave end day scene
     done=true;
   }
 
@@ -67,8 +70,11 @@ public class GameOverScreen : MonoBehaviour
     done=false;
     Choose.gameObject.SetActive(false);
     Incorrect.gameObject.SetActive(true);
-    day=day+1;
 
+     //increment day by one
+    InvManager.Instance.day=InvManager.Instance.day+1;
+
+     //toggle boolean to indicate user can now leave end day scene
     done=true;
   }
 
