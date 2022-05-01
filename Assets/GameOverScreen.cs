@@ -6,7 +6,9 @@ using UnityEngine.SceneManagement;
 public class GameOverScreen : MonoBehaviour
 {
 
-  
+  [SerializeField] GameObject Correct;
+  [SerializeField] GameObject Incorrect;
+  [SerializeField] GameObject Choose;
 
   public void Setup()
   {
@@ -25,8 +27,22 @@ public class GameOverScreen : MonoBehaviour
     SceneManager.LoadScene("Town");
   }
 
-  public void ExitButton()
+  public void CorrectChoice()
   {
-    SceneManager.LoadScene("Town");
+    Choose.gameObject.SetActive(false);
+    Correct.gameObject.SetActive(true);
+
+    //if clicked anywhere
+    RestartButton();
   }
+
+  public void IncorrectChoice()
+  {
+    Choose.gameObject.SetActive(false);
+    Incorrect.gameObject.SetActive(true);
+
+    //if clicked anywhere
+    RestartButton();
+  }
+
 }
