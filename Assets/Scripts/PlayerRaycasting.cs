@@ -164,7 +164,7 @@ public class PlayerRaycasting : MonoBehaviour
                     {
                         SceneManager.LoadScene("ChurchScene2", LoadSceneMode.Single);
                     }
-                    else if (whatIHit.collider.gameObject.GetComponent<DoorManager>().whatDoorAmI == DoorManager.Doors.libraryDoor)
+                    else if (whatIHit.collider.gameObject.GetComponent<DoorManager>().whatDoorAmI == DoorManager.Doors.libraryDoorF)
                     {                      
                         SceneManager.LoadScene("Library", LoadSceneMode.Single);
                     }
