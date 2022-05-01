@@ -90,7 +90,12 @@ public class TimeController : MonoBehaviour
 
         if (timeText != null)
         {
-            timeText.text = currentTime.ToString("HH:mm");
+            timeText.text = currentTime.ToString("hh:mm tt");
+        }
+
+        if (currentTime.ToString("HH:mm") == "22:00")
+        {
+            timeText.color = Color.red;
         }
 
         if(currentTime.ToString("HH:mm") == "23:30")
