@@ -9,6 +9,7 @@ public class DialogueSystem: MonoBehaviour {
 
     public Text nameText;
     public Text dialogueText;
+    public Image portrait;
 
     public GameObject dialogueGUI;
     public Transform dialogueBoxGUI;
@@ -19,7 +20,7 @@ public class DialogueSystem: MonoBehaviour {
     public KeyCode DialogueInput = KeyCode.F;
 
     public string Names;
-
+    public Sprite spr;
     public string[] dialogueLines;
 
     public bool letterIsMultiplied = false;
@@ -64,6 +65,7 @@ public class DialogueSystem: MonoBehaviour {
         outOfRange = false;
         dialogueBoxGUI.gameObject.SetActive(true);
         nameText.text = Names;
+        portrait.sprite = spr;
         if (Input.GetKeyDown(KeyCode.F))
         {
             if (!dialogueActive)

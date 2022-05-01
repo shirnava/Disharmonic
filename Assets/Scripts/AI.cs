@@ -67,6 +67,7 @@ public class AI : MonoBehaviour {
 
     // Start is called before the first frame update
     void Start() {
+        FindObjectOfType<AudioManager>().PlayIfOff("static");
         startPosition = transform.position;
         target = PlayerManager.instance.player.transform;
         agent = GetComponent<NavMeshAgent>();
@@ -103,6 +104,12 @@ public class AI : MonoBehaviour {
         {
             setState(AIState.Wander);
 
+        }
+
+        // Modify volume of static based on distance
+        if (distance != 0)
+        {
+            FindObjectOfType<AudioManager>().ChangeVolume("static", 4 * (1.0f / distance));
         }
 
         runState();
