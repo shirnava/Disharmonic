@@ -48,7 +48,7 @@ public class PlayerHealth : MonoBehaviour
                 {
                     Destroy(GameObject.FindWithTag("Ddme"));
                     Destroy(GameObject.FindWithTag("TestThrowCube"));
-                    SceneManager.LoadScene("MainMenu");
+                    SceneManager.LoadScene("GameOver");
                 }
             }
 
