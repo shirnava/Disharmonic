@@ -22248,7 +22248,8 @@ MonoBehaviour:
   distractedRange: 15
   playerSound: {fileID: 0}
   playerHealth: {fileID: 0}
-  distraction: {fileID: 0}
+  distractObj: {fileID: 0}
+  throwableObjects: []
   playerTalking: 0
   waitTime: 0
 --- !u!54 &1349948833
@@ -34931,6 +34932,7 @@ GameObject:
   - component: {fileID: 2130141822}
   - component: {fileID: 2130141821}
   - component: {fileID: 2130141820}
+  - component: {fileID: 2130141825}
   m_Layer: 0
   m_Name: Waitress
   m_TagString: NPC
@@ -34973,13 +34975,15 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2130141819}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 980bcfe63b47dda40b470ed02c9fefcf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   ChatBackGround: {fileID: 1449567060}
   NPCCharacter: {fileID: 2130141824}
+  AfterPuzzle: {fileID: 0}
+  Inventory: {fileID: 0}
   Name: Clara (Waitress)
   pict: {fileID: 21300000, guid: ad98b07492f45f7429c160683b6e1859, type: 3}
   sentences:
@@ -35048,6 +35052,33 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: -342.256, z: 0}
+--- !u!114 &2130141825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2130141819}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d43ad477af42ac4bb2841ddbcabcbe4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ChatBackGround: {fileID: 1449567060}
+  NPCCharacter: {fileID: 2130141824}
+  Inventory: {fileID: 0}
+  Name: Clara (Waitress)
+  pict: {fileID: 21300000, guid: ad98b07492f45f7429c160683b6e1859, type: 3}
+  sentences:
+  - Here for a cuppa, love?
+  - "... Last night? Yeah. Real \nshame, that one. Too bad."
+  - "He and that Gravekeeper \nsure do seem similar, don\u2019t they? \nThat\u2019s
+    what you get for living \nlife on the outskirts like that."
+  - "... Don\u2019t worry, dear! Wipe \nthat frown off of your face! \nIt\u2019ll
+    be just fine."
+  player: {fileID: 0}
+  enemy: {fileID: 0}
+  talk: {fileID: 0}
 --- !u!1 &2131836198
 GameObject:
   m_ObjectHideFlags: 0

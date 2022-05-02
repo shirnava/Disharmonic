@@ -4463,6 +4463,7 @@ GameObject:
   - component: {fileID: 356395096}
   - component: {fileID: 356395095}
   - component: {fileID: 356395094}
+  - component: {fileID: 356395099}
   m_Layer: 0
   m_Name: OlderStudentsParent
   m_TagString: NPC
@@ -4505,13 +4506,15 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 356395093}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 980bcfe63b47dda40b470ed02c9fefcf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   ChatBackGround: {fileID: 1975568025}
   NPCCharacter: {fileID: 356395098}
+  AfterPuzzle: {fileID: 0}
+  Inventory: {fileID: 0}
   Name: Ms. Evans (Michael's Mother)
   pict: {fileID: 21300000, guid: da2178a7c6dc66c498d8905e98e38cd3, type: 3}
   sentences:
@@ -4578,6 +4581,31 @@ Transform:
   m_Father: {fileID: 1651774761}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: -287.01898, z: 0}
+--- !u!114 &356395099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 356395093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d43ad477af42ac4bb2841ddbcabcbe4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ChatBackGround: {fileID: 1975568025}
+  NPCCharacter: {fileID: 356395098}
+  Inventory: {fileID: 0}
+  Name: Ms. Evans (Michael's Mother)
+  pict: {fileID: 21300000, guid: da2178a7c6dc66c498d8905e98e38cd3, type: 3}
+  sentences:
+  - "Michael is quite the \nprecocious one, isn\u2019t he? \nSo interested in reading."
+  - "It was his idea to come \nhere in the first place! "
+  - "He asked to go alone, but \nhow could I, in all good faith, \nlet him go by
+    himself when a \nmurder has just taken place?!"
+  player: {fileID: 0}
+  enemy: {fileID: 0}
+  talk: {fileID: 0}
 --- !u!1 &357898527
 GameObject:
   m_ObjectHideFlags: 0
@@ -17083,7 +17111,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4728945399384822, guid: dbc490f90759d724a8f076c4c8af84ea, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 69.05
+      value: 70
       objectReference: {fileID: 0}
     - target: {fileID: 4728945399384822, guid: dbc490f90759d724a8f076c4c8af84ea, type: 3}
       propertyPath: m_LocalPosition.y
@@ -17091,7 +17119,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4728945399384822, guid: dbc490f90759d724a8f076c4c8af84ea, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -4.77
+      value: -6
       objectReference: {fileID: 0}
     - target: {fileID: 4728945399384822, guid: dbc490f90759d724a8f076c4c8af84ea, type: 3}
       propertyPath: m_LocalRotation.w
@@ -21337,6 +21365,7 @@ GameObject:
   - component: {fileID: 1568126737}
   - component: {fileID: 1568126736}
   - component: {fileID: 1568126735}
+  - component: {fileID: 1568126740}
   m_Layer: 0
   m_Name: OlderStudent
   m_TagString: NPC
@@ -21379,13 +21408,15 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1568126734}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 980bcfe63b47dda40b470ed02c9fefcf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   ChatBackGround: {fileID: 1975568025}
   NPCCharacter: {fileID: 1568126739}
+  AfterPuzzle: {fileID: 0}
+  Inventory: {fileID: 0}
   Name: Michael (Older Student)
   pict: {fileID: 21300000, guid: 9941e0e30c02dcf498dd18701f7fc104, type: 3}
   sentences:
@@ -21445,14 +21476,39 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1568126734}
-  m_LocalRotation: {x: -0, y: -0.7955169, z: -0, w: -0.6059314}
-  m_LocalPosition: {x: 56.865532, y: 1.6376612, z: -7.7783413}
+  m_LocalRotation: {x: -0, y: -0.93654305, z: -0, w: -0.3505527}
+  m_LocalPosition: {x: 54.793274, y: 1.6376612, z: -19.118965}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 290725708}
   m_Father: {fileID: 1651774761}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: -254.59201, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -221.042, z: 0}
+--- !u!114 &1568126740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1568126734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d43ad477af42ac4bb2841ddbcabcbe4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ChatBackGround: {fileID: 1975568025}
+  NPCCharacter: {fileID: 1568126739}
+  Inventory: {fileID: 0}
+  Name: Michael (Older Student)
+  pict: {fileID: 21300000, guid: 9941e0e30c02dcf498dd18701f7fc104, type: 3}
+  sentences:
+  - "Hey, thank you! I can\u2019t believe you did that for me! I so owe you one!"
+  - "... This? Yeah, it\u2019s\u2026 it\u2019s a bible. I\u2019m just curious. That\u2019s
+    all."
+  - "... Please don\u2019t tell anyone. Even Janelle."
+  player: {fileID: 0}
+  enemy: {fileID: 0}
+  talk: {fileID: 0}
 --- !u!1001 &1578403142
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27679,6 +27735,7 @@ GameObject:
   - component: {fileID: 2067373616}
   - component: {fileID: 2067373615}
   - component: {fileID: 2067373614}
+  - component: {fileID: 2067373619}
   m_Layer: 0
   m_Name: Librarian
   m_TagString: NPC
@@ -27721,13 +27778,15 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2067373613}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 980bcfe63b47dda40b470ed02c9fefcf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   ChatBackGround: {fileID: 1975568025}
   NPCCharacter: {fileID: 2067373618}
+  AfterPuzzle: {fileID: 0}
+  Inventory: {fileID: 0}
   Name: Agnes (Librarian)
   pict: {fileID: 21300000, guid: b072645aa517ab64c9be0c4b05f9d213, type: 3}
   sentences:
@@ -27796,6 +27855,29 @@ Transform:
   m_Father: {fileID: 1651774761}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -173.857, z: 0}
+--- !u!114 &2067373619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2067373613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d43ad477af42ac4bb2841ddbcabcbe4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ChatBackGround: {fileID: 1975568025}
+  NPCCharacter: {fileID: 2067373618}
+  Inventory: {fileID: 0}
+  Name: Agnes (Librarian)
+  pict: {fileID: 21300000, guid: b072645aa517ab64c9be0c4b05f9d213, type: 3}
+  sentences:
+  - I suggest that you are a bit more cautious about the literature you choose to
+    pursue from this point out.
+  player: {fileID: 0}
+  enemy: {fileID: 0}
+  talk: {fileID: 0}
 --- !u!1 &2075236081
 GameObject:
   m_ObjectHideFlags: 0

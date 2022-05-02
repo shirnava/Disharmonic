@@ -10,6 +10,8 @@ public class NPC : MonoBehaviour {
 
     public Transform ChatBackGround;
     public Transform NPCCharacter;
+    public afterPuzzleNPC AfterPuzzle;
+    public Inventory Inventory;
 
     private DialogueSystem dialogueSystem;
 
@@ -25,10 +27,12 @@ public class NPC : MonoBehaviour {
 
 
     void Start () {
-        
+
+        AfterPuzzle = GetComponent<afterPuzzleNPC>();
         dialogueSystem = FindObjectOfType<DialogueSystem>();
         player = GameObject.FindWithTag("Player");
-        if(GameObject.Find("Enemy") != null)
+        Inventory = GameObject.Find("PlayerCapsule").GetComponent<Inventory>();
+        if (GameObject.Find("Enemy") != null)
         {
             talk = GameObject.Find("Enemy").GetComponent<AI>();
         }
@@ -50,36 +54,39 @@ public class NPC : MonoBehaviour {
 
     public void OnTriggerStay(Collider other)
     {
-                
-       
-        this.gameObject.GetComponent<NPC>().enabled = true;
-        FindObjectOfType<DialogueSystem>().EnterRangeOfNPC();
-        
-        if ((other.gameObject.tag == "Player") && Input.GetKeyDown(KeyCode.F))
-        {
-            if(FindObjectOfType<PlayerRaycasting>().ItHit == true)
-            {
-                
-                this.gameObject.GetComponent<NPC>().enabled = true;
-                dialogueSystem.Names = Name;
-                dialogueSystem.dialogueLines = sentences;
-                dialogueSystem.spr = pict;
-                FindObjectOfType<DialogueSystem>().NPCName();
-                //Debug.Log("its hit");
 
-                if(talk != null)
+        if (Inventory.hasBookKey == false)
+        {
+
+            this.gameObject.GetComponent<NPC>().enabled = true;
+            FindObjectOfType<DialogueSystem>().EnterRangeOfNPC();
+
+            if ((other.gameObject.tag == "Player") && Input.GetKeyDown(KeyCode.F))
+            {
+                if (FindObjectOfType<PlayerRaycasting>().ItHit == true)
                 {
-                    talk.playerTalking = true;
+
+                    this.gameObject.GetComponent<NPC>().enabled = true;
+                    dialogueSystem.Names = Name;
+                    dialogueSystem.dialogueLines = sentences;
+                    dialogueSystem.spr = pict;
+                    FindObjectOfType<DialogueSystem>().NPCName();
+                    //Debug.Log("its hit");
+
+                    if (talk != null)
+                    {
+                        talk.playerTalking = true;
+                    }
+
+                    FindObjectOfType<FirstPersonController>().MoveSpeed = 0.0f;
+                    FindObjectOfType<FirstPersonController>().SprintSpeed = 0.0f;
+                    FindObjectOfType<FirstPersonController>().RotationSpeed = 0.0f;
+                    FindObjectOfType<FirstPersonController>().SpeedChangeRate = 0.0f;
                 }
-               
-                FindObjectOfType<FirstPersonController>().MoveSpeed = 0.0f;
-                FindObjectOfType<FirstPersonController>().SprintSpeed = 0.0f;
-                FindObjectOfType<FirstPersonController>().RotationSpeed = 0.0f;
-                FindObjectOfType<FirstPersonController>().SpeedChangeRate = 0.0f;
+
             }
-            
         }
-        
+
     }
 
     public void OnTriggerExit()

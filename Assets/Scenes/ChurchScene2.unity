@@ -1809,6 +1809,7 @@ GameObject:
   - component: {fileID: 490837521}
   - component: {fileID: 490837520}
   - component: {fileID: 490837519}
+  - component: {fileID: 490837524}
   m_Layer: 0
   m_Name: Priest
   m_TagString: NPC
@@ -1851,13 +1852,15 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 490837518}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 980bcfe63b47dda40b470ed02c9fefcf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   ChatBackGround: {fileID: 17954744}
   NPCCharacter: {fileID: 490837523}
+  AfterPuzzle: {fileID: 0}
+  Inventory: {fileID: 0}
   Name: Father David (Pastor)
   pict: {fileID: 21300000, guid: 0ff86ba728f1b1046a8fe5dab1af15a8, type: 3}
   sentences:
@@ -1923,6 +1926,28 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: -78.915, z: 0}
+--- !u!114 &490837524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 490837518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d43ad477af42ac4bb2841ddbcabcbe4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ChatBackGround: {fileID: 17954744}
+  NPCCharacter: {fileID: 490837523}
+  Inventory: {fileID: 0}
+  Name: Father David (Pastor)
+  pict: {fileID: 21300000, guid: 0ff86ba728f1b1046a8fe5dab1af15a8, type: 3}
+  sentences:
+  - "...Our church does not host scripture in Harmony\u2019s local library."
+  player: {fileID: 0}
+  enemy: {fileID: 0}
+  talk: {fileID: 0}
 --- !u!1 &511618779
 GameObject:
   m_ObjectHideFlags: 0
