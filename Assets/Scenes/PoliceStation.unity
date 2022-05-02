@@ -16360,7 +16360,8 @@ MonoBehaviour:
   distractedRange: 15
   playerSound: {fileID: 0}
   playerHealth: {fileID: 0}
-  distraction: {fileID: 0}
+  distractObj: {fileID: 0}
+  throwableObjects: []
   playerTalking: 0
   waitTime: 20
 --- !u!54 &600895090
@@ -49160,6 +49161,7 @@ GameObject:
   - component: {fileID: 1729540896}
   - component: {fileID: 1729540895}
   - component: {fileID: 1729540894}
+  - component: {fileID: 1729540899}
   m_Layer: 0
   m_Name: Receptionist
   m_TagString: NPC
@@ -49202,13 +49204,15 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1729540893}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 980bcfe63b47dda40b470ed02c9fefcf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   ChatBackGround: {fileID: 1980944697}
   NPCCharacter: {fileID: 1729540898}
+  AfterPuzzle: {fileID: 0}
+  Inventory: {fileID: 0}
   Name: Lucas (Receptionist)
   pict: {fileID: 21300000, guid: f3e7c3e0d480ad04ba7c6e331b18cded, type: 3}
   sentences:
@@ -49275,6 +49279,31 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: -173.428, z: 0}
+--- !u!114 &1729540899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1729540893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d43ad477af42ac4bb2841ddbcabcbe4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ChatBackGround: {fileID: 1980944697}
+  NPCCharacter: {fileID: 1729540898}
+  Inventory: {fileID: 0}
+  Name: Lucas (Receptionist)
+  pict: {fileID: 21300000, guid: f3e7c3e0d480ad04ba7c6e331b18cded, type: 3}
+  sentences:
+  - "H-huh? What? What do you need? \nHuh?"
+  - "... My\u2026 My fr-friend? Why do you \nneed to know?"
+  - "... Fine! Fine\u2026 Just\u2026 don\u2019t hurt me!"
+  - "I\u2019m friends with Lilith, the \nGravekeeper!  Go bother him!"
+  player: {fileID: 0}
+  enemy: {fileID: 0}
+  talk: {fileID: 0}
 --- !u!1 &1729768523
 GameObject:
   m_ObjectHideFlags: 0

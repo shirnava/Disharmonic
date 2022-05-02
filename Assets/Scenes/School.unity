@@ -10014,6 +10014,7 @@ GameObject:
   - component: {fileID: 798591347}
   - component: {fileID: 798591346}
   - component: {fileID: 798591345}
+  - component: {fileID: 798591350}
   m_Layer: 0
   m_Name: Teacher
   m_TagString: NPC
@@ -10042,18 +10043,20 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 798591344}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 980bcfe63b47dda40b470ed02c9fefcf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   ChatBackGround: {fileID: 1790861324}
   NPCCharacter: {fileID: 798591349}
+  AfterPuzzle: {fileID: 0}
+  Inventory: {fileID: 0}
   Name: Ms. Maria (Teacher)
   pict: {fileID: 21300000, guid: c1d36f448e6634948bb8f30d14fdc108, type: 3}
   sentences:
-  - "Are you looking for Michael? \nThey went with their mother to the \nlibrary
-    to check for a book a while \nago."
+  - "Are you looking for Michael? \nHe went with his mother to the \nlibrary to check
+    for a book a while \nago."
   player: {fileID: 0}
   enemy: {fileID: 0}
   talk: {fileID: 0}
@@ -10127,6 +10130,29 @@ Transform:
   m_Father: {fileID: 1987273316}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -197.365, z: 0}
+--- !u!114 &798591350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 798591344}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d43ad477af42ac4bb2841ddbcabcbe4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ChatBackGround: {fileID: 1790861324}
+  NPCCharacter: {fileID: 798591349}
+  Inventory: {fileID: 0}
+  Name: Ms. Maria (Teacher)
+  pict: {fileID: 21300000, guid: c1d36f448e6634948bb8f30d14fdc108, type: 3}
+  sentences:
+  - "Are you looking for Michael? \nHe went with his mother to the \nlibrary to check
+    for a book a while \nago."
+  player: {fileID: 0}
+  enemy: {fileID: 0}
+  talk: {fileID: 0}
 --- !u!1001 &801857100
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17832,6 +17858,7 @@ GameObject:
   - component: {fileID: 1353982222}
   - component: {fileID: 1353982221}
   - component: {fileID: 1353982220}
+  - component: {fileID: 1353982225}
   m_Layer: 0
   m_Name: Police Chief
   m_TagString: NPC
@@ -17860,13 +17887,15 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1353982219}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 980bcfe63b47dda40b470ed02c9fefcf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   ChatBackGround: {fileID: 1790861324}
   NPCCharacter: {fileID: 1353982224}
+  AfterPuzzle: {fileID: 0}
+  Inventory: {fileID: 0}
   Name: Rodney (Chief of Police)
   pict: {fileID: 21300000, guid: b3b1339767971c8429be25bf1cf252b8, type: 3}
   sentences:
@@ -17948,6 +17977,32 @@ Transform:
   m_Father: {fileID: 1987273316}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: -257.188, z: 0}
+--- !u!114 &1353982225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1353982219}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d43ad477af42ac4bb2841ddbcabcbe4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ChatBackGround: {fileID: 1790861324}
+  NPCCharacter: {fileID: 1353982224}
+  Inventory: {fileID: 0}
+  Name: Rodney (Chief of Police)
+  pict: {fileID: 21300000, guid: b3b1339767971c8429be25bf1cf252b8, type: 3}
+  sentences:
+  - "Good to see you, kiddo. How\u2019s the \ninvestigation coming along?"
+  - "... Oh, I\u2019m checking up on the \nstudents. They\u2019re the future \nof
+    Harmony, after all!"
+  - "There\u2019s been some\u2026 conduct issues,\nlately. Guess some of these kids
+    \nneed to be whipped into shape, \nhaha!"
+  player: {fileID: 0}
+  enemy: {fileID: 0}
+  talk: {fileID: 0}
 --- !u!1001 &1357303331
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24141,7 +24196,8 @@ MonoBehaviour:
   distractedRange: 15
   playerSound: {fileID: 0}
   playerHealth: {fileID: 0}
-  distraction: {fileID: 0}
+  distractObj: {fileID: 0}
+  throwableObjects: []
   playerTalking: 0
   waitTime: 20
 --- !u!54 &1967121460
@@ -26274,6 +26330,7 @@ GameObject:
   - component: {fileID: 2141241588}
   - component: {fileID: 2141241587}
   - component: {fileID: 2141241586}
+  - component: {fileID: 2141241591}
   m_Layer: 0
   m_Name: Younger Student
   m_TagString: NPC
@@ -26302,13 +26359,15 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2141241585}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 980bcfe63b47dda40b470ed02c9fefcf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   ChatBackGround: {fileID: 1790861324}
   NPCCharacter: {fileID: 2141241590}
+  AfterPuzzle: {fileID: 0}
+  Inventory: {fileID: 0}
   Name: Janelle (Younger Student)
   pict: {fileID: 21300000, guid: 1dd2e284bd9227a4d840e1c38492294a, type: 3}
   sentences:
@@ -26391,6 +26450,33 @@ Transform:
   m_Father: {fileID: 1987273316}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: -300.438, z: 0}
+--- !u!114 &2141241591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2141241585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d43ad477af42ac4bb2841ddbcabcbe4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ChatBackGround: {fileID: 1790861324}
+  NPCCharacter: {fileID: 2141241590}
+  Inventory: {fileID: 0}
+  Name: Janelle (Younger Student)
+  pict: {fileID: 0}
+  sentences:
+  - "... A-Agh! \u2026 I-I-I-I\u2026 H-H-Hello! \nM-M-My name is Janelle!"
+  - "M-M-My momma told me I hafta \nbe polite! E-E-Even if\u2026 t-t-t-t-\nthat stinky
+    man\u2026 died! \nLast n-night!"
+  - "... I\u2019m, I just- I dunno- I\u2026 I just \nthink! I can\u2019t help but
+    think \nthat\u2026 maybe\u2026 \n"
+  - "Someone- Someone I love a \nwhole lot is g-g-gonna be \nnext!"
+  player: {fileID: 0}
+  enemy: {fileID: 0}
+  talk: {fileID: 0}
 --- !u!1001 &2142220980
 PrefabInstance:
   m_ObjectHideFlags: 0
