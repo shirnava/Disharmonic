@@ -22975,6 +22975,14 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -5714644499420835084, guid: dbc490f90759d724a8f076c4c8af84ea, type: 3}
+      propertyPath: Items.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 3a159315af6c7694db47b976d8449c0a, type: 2}
+    - target: {fileID: -2609549541130069552, guid: dbc490f90759d724a8f076c4c8af84ea, type: 3}
+      propertyPath: Item
+      value: 
+      objectReference: {fileID: 11400000, guid: 3a159315af6c7694db47b976d8449c0a, type: 2}
     - target: {fileID: 1059599080716558, guid: dbc490f90759d724a8f076c4c8af84ea, type: 3}
       propertyPath: m_Name
       value: Pancakes
@@ -23048,7 +23056,15 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4300000, guid: 37878f2881441d64e83fb9b75b52d91c, type: 3}
     - target: {fileID: 64288575762821316, guid: dbc490f90759d724a8f076c4c8af84ea, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4300000, guid: 37878f2881441d64e83fb9b75b52d91c, type: 3}
+    - target: {fileID: 64288575762821316, guid: dbc490f90759d724a8f076c4c8af84ea, type: 3}
       propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 64288575762821316, guid: dbc490f90759d724a8f076c4c8af84ea, type: 3}
+      propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
