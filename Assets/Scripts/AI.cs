@@ -43,7 +43,6 @@ public class AI : MonoBehaviour {
         if(state == AIState.Distracted)
         {
             Distracted();
-            Debug.Log("Is this getting run??1");}
     }
 
     protected void runState()
@@ -67,7 +66,6 @@ public class AI : MonoBehaviour {
                 break;
 
             case AIState.Distracted:
-                Debug.Log("Is this getting run??2");
                 Distracted();
                 break;
         }
