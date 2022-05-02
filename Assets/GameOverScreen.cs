@@ -45,6 +45,7 @@ public class GameOverScreen : MonoBehaviour
     Choose.gameObject.SetActive(false);
     Correct.gameObject.SetActive(true);
 
+    /*
     if(InvManager.Instance.day==1)
     {
       InvManager.Instance.hasWonFirstDay = true;
@@ -57,9 +58,10 @@ public class GameOverScreen : MonoBehaviour
     {
       InvManager.Instance.hasWonThirdDay = true;
     }
+    */
 
     //increment day by one
-    InvManager.Instance.day=InvManager.Instance.day+1;
+    //InvManager.Instance.day=InvManager.Instance.day+1;
 
     //toggle boolean to indicate user can now leave end day scene
     done=true;
@@ -72,7 +74,7 @@ public class GameOverScreen : MonoBehaviour
     Incorrect.gameObject.SetActive(true);
 
      //increment day by one
-    InvManager.Instance.day=InvManager.Instance.day+1;
+    //InvManager.Instance.day=InvManager.Instance.day+1;
 
      //toggle boolean to indicate user can now leave end day scene
     done=true;
