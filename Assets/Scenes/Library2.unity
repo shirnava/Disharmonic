@@ -4512,11 +4512,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ChatBackGround: {fileID: 1975568025}
   NPCCharacter: {fileID: 356395098}
-  Name: Sarah (Police Deputy)
-  pict: {fileID: 0}
+  Name: Ms. Evans (Michael's Mother)
+  pict: {fileID: 21300000, guid: da2178a7c6dc66c498d8905e98e38cd3, type: 3}
   sentences:
-  - "Older student is quite the \nprecocious one, isn\u2019t he? So interested in
-    reading."
+  - "Michael is quite the \nprecocious one, isn\u2019t he? \nSo interested in reading."
   - "It was his idea to come \nhere in the first place! "
   - "He asked to go alone, but \nhow could I, in all good faith, \nlet him go by
     himself when a \nmurder has just taken place?!"
@@ -8349,7 +8348,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh3769318
+  m_Name: pb_Mesh62094
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -12575,7 +12574,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh3770028
+  m_Name: pb_Mesh62822
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -21386,10 +21385,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ChatBackGround: {fileID: 1975568025}
   NPCCharacter: {fileID: 1568126739}
-  Name: Sarah (Police Deputy)
+  Name: Michael (Older Student)
   pict: {fileID: 21300000, guid: 9941e0e30c02dcf498dd18701f7fc104, type: 3}
   sentences:
-  - "\u201CPsst. Hey. You. Yeah, \nyou! Can you help me?!"
+  - "Psst. Hey. You. Yeah, \nyou! Can you help me?!"
   - "I\u2019ve got a problem. I need \na\u2026 book, okay? I just don\u2019t \nwant\u2026
     to talk to the librarian."
   - "You\u2019ll help?! Great! It\u2019s this \nISBN, okay? Just ask her \nand she\u2019ll
@@ -25080,7 +25079,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh3769852
+  m_Name: pb_Mesh62646
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -27263,7 +27262,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh3771252
+  m_Name: pb_Mesh64078
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -27728,7 +27727,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ChatBackGround: {fileID: 1975568025}
   NPCCharacter: {fileID: 2067373618}
-  Name: Sarah (Police Deputy)
+  Name: Agnes (Librarian)
   pict: {fileID: 21300108, guid: 37607ec1aab56e349af84a980f685a4b, type: 3}
   sentences:
   - "Keep your voice down. The \nstreets outside may be sullied \nwith the blood

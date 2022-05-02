@@ -10049,10 +10049,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ChatBackGround: {fileID: 1790861324}
   NPCCharacter: {fileID: 798591349}
-  Name: Teacher
+  Name: Ms. Maria (Teacher)
   pict: {fileID: 21300000, guid: c1d36f448e6634948bb8f30d14fdc108, type: 3}
   sentences:
-  - "Are you looking for older student? \nThey went with their mother to the \nlibrary
+  - "Are you looking for Michael? \nThey went with their mother to the \nlibrary
     to check for a book a while \nago."
   player: {fileID: 0}
   enemy: {fileID: 0}
@@ -17867,8 +17867,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ChatBackGround: {fileID: 1790861324}
   NPCCharacter: {fileID: 1353982224}
-  Name: Police Chief
-  pict: {fileID: 0}
+  Name: Rodney (Chief of Police)
+  pict: {fileID: 21300000, guid: b3b1339767971c8429be25bf1cf252b8, type: 3}
   sentences:
   - "Good to see you, kiddo. How\u2019s the \ninvestigation coming along?"
   - "... Oh, I\u2019m checking up on the \nstudents. They\u2019re the future \nof
@@ -26309,10 +26309,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ChatBackGround: {fileID: 1790861324}
   NPCCharacter: {fileID: 2141241590}
-  Name: Younger Student
+  Name: Janelle (Younger Student)
   pict: {fileID: 21300000, guid: 1dd2e284bd9227a4d840e1c38492294a, type: 3}
   sentences:
-  - "... A-Agh! \u2026 I-I-I-I\u2026 H-H-Hello! \nM-M-My name is [NAME]!"
+  - "... A-Agh! \u2026 I-I-I-I\u2026 H-H-Hello! \nM-M-My name is Janelle!"
   - "M-M-My momma told me I hafta \nbe polite! E-E-Even if\u2026 t-t-t-t-\nthat stinky
     man\u2026 died! \nLast n-night!"
   - "... I\u2019m, I just- I dunno- I\u2026 I just \nthink! I can\u2019t help but

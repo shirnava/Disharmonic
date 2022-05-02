@@ -49205,13 +49205,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ChatBackGround: {fileID: 1980944697}
   NPCCharacter: {fileID: 1729540898}
-  Name: Lilith (Gravekeeper)
+  Name: Lucas (Receptionist)
   pict: {fileID: 0}
   sentences:
   - "H-huh? What? What do you need? \nHuh?"
   - "... My\u2026 My fr-friend? Why do you \nneed to know?"
   - "... Fine! Fine\u2026 Just\u2026 don\u2019t hurt me!"
-  - "I\u2019m friends with the Gravekeeper! \nGo bother him!"
+  - "I\u2019m friends with Lilith, the \nGravekeeper! Go bother him!"
   player: {fileID: 0}
   enemy: {fileID: 0}
   talk: {fileID: 0}
