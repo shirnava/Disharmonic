@@ -25,7 +25,8 @@ public class AI : MonoBehaviour {
     public float distractedRange = 25f;
     public SoundController playerSound;
     public PlayerHealth playerHealth;
-    public DistractionSystem distraction;
+    public DistractionSystem distractObj;
+    public GameObject [] throwableObjects;
     public bool playerTalking = false;
     public int waitTime; 
 
@@ -33,10 +34,16 @@ public class AI : MonoBehaviour {
 
     protected void setState(AIState state)
     {
+        
         nextState = state;
         if (nextState != currentState) {
             currentState = nextState;
         }
+
+        if(state == AIState.Distracted)
+        {
+            Distracted();
+            Debug.Log("Is this getting run??1");}
     }
 
     protected void runState()
@@ -60,6 +67,7 @@ public class AI : MonoBehaviour {
                 break;
 
             case AIState.Distracted:
+                Debug.Log("Is this getting run??2");
                 Distracted();
                 break;
         }
@@ -83,7 +91,7 @@ public class AI : MonoBehaviour {
         agent.SetDestination(RoamPosition());
         playerSound = GameObject.Find("PlayerCapsule").GetComponent<SoundController>();
         playerHealth = GameObject.Find("PlayerCapsule").GetComponent<PlayerHealth>();
-        distraction = GameObject.FindWithTag("ThrowableObject").GetComponent<DistractionSystem>(); 
+        throwableObjects = GameObject.FindGameObjectsWithTag("ThrowableObject");
     }
     
     // Update is called once per frame
@@ -91,17 +99,21 @@ public class AI : MonoBehaviour {
         if(target != null)
         {
 
+        foreach(GameObject distraction in throwableObjects)
+        {
+        if (distraction.GetComponent<DistractionSystem>().noiseMade == true && Vector3.Distance(distraction.GetComponent<DistractionSystem>().location, transform.position) <= distractedRange)
+        {
+            distractObj = distraction.GetComponent<DistractionSystem>();
+            setState(AIState.Distracted);
+
+        }
+        }
         
         distance = Vector3.Distance(target.position, transform.position);
 
         if(playerTalking == true)
         {
             setState(AIState.Talking);
-        }
-
-        else if ((distraction.noiseMade == true) && (Vector3.Distance(distraction.location, transform.position) <= distractedRange))
-        {
-            setState(AIState.Distracted);
         }
 
         else if ((playerSound.inRange == true) && (playerSound.withinAttack == true))
@@ -131,9 +143,9 @@ public class AI : MonoBehaviour {
     private void Distracted()
     {
         agent.speed = walkSpeed;
-        distractedSearch = distraction.location;
+        distractedSearch = distractObj.location;
         agent.SetDestination(distractedSearch);
-        distraction.noiseMade = false;
+        distractObj.noiseMade = false;
     }
 
     private void Talking()
