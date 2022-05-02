@@ -3552,7 +3552,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   musicSource: {fileID: 249174115}
-  musicStart: {fileID: 8300000, guid: ef8ba4c4942535c4fb799632435514c7, type: 3}
+  musicStart: {fileID: 8300000, guid: ae4555247792a8e408e7dc2dd69f3e58, type: 3}
 --- !u!82 &249174115
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3563,7 +3563,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24300002, guid: 41d213742774b4afbaecdb79c34bcbfb, type: 2}
-  m_audioClip: {fileID: 8300000, guid: 32acff642c9fbaa4381b8eef5200b979, type: 3}
+  m_audioClip: {fileID: 8300000, guid: d4052cecf6186bb459d8a3f8920050da, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.87
   m_Pitch: 1
