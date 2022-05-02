@@ -19044,7 +19044,8 @@ MonoBehaviour:
   distractedRange: 15
   playerSound: {fileID: 0}
   playerHealth: {fileID: 0}
-  distraction: {fileID: 0}
+  distractObj: {fileID: 0}
+  throwableObjects: []
   playerTalking: 0
   waitTime: 20
 --- !u!54 &1420552200
@@ -27728,7 +27729,7 @@ MonoBehaviour:
   ChatBackGround: {fileID: 1975568025}
   NPCCharacter: {fileID: 2067373618}
   Name: Agnes (Librarian)
-  pict: {fileID: 21300108, guid: 37607ec1aab56e349af84a980f685a4b, type: 3}
+  pict: {fileID: 21300000, guid: b072645aa517ab64c9be0c4b05f9d213, type: 3}
   sentences:
   - "Keep your voice down. The \nstreets outside may be sullied \nwith the blood
     of that vagabond, \nbut here we have standards!"

@@ -1859,7 +1859,7 @@ MonoBehaviour:
   ChatBackGround: {fileID: 17954744}
   NPCCharacter: {fileID: 490837523}
   Name: Father David (Pastor)
-  pict: {fileID: 0}
+  pict: {fileID: 21300000, guid: 0ff86ba728f1b1046a8fe5dab1af15a8, type: 3}
   sentences:
   - "I\u2019m unaware of the \ncircumstances surrounding\nHomeless Person\u2019s
     \npassing last night. "
@@ -3581,6 +3581,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7631007927178587838, guid: dc2f0795586147e4786d43a12127628b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7739153715016033349, guid: dc2f0795586147e4786d43a12127628b, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 8
@@ -5080,7 +5084,8 @@ MonoBehaviour:
   distractedRange: 15
   playerSound: {fileID: 0}
   playerHealth: {fileID: 0}
-  distraction: {fileID: 0}
+  distractObj: {fileID: 0}
+  throwableObjects: []
   playerTalking: 0
   waitTime: 0
 --- !u!54 &1343499594
