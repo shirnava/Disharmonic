@@ -10,8 +10,11 @@ public class GameOverScreen : MonoBehaviour
   [SerializeField] GameObject Incorrect;
   [SerializeField] GameObject Choose;
   public bool done=false;
+  public bool correct;
+  public bool incorrect;
 
-  public void Setup()
+
+    public void Setup()
   {
     //gameObject.setActive(true);
     
@@ -44,6 +47,7 @@ public class GameOverScreen : MonoBehaviour
     done=false;
     Choose.gameObject.SetActive(false);
     Correct.gameObject.SetActive(true);
+        correct = true;
 
     /*
     if(InvManager.Instance.day==1)
@@ -72,6 +76,8 @@ public class GameOverScreen : MonoBehaviour
     done=false;
     Choose.gameObject.SetActive(false);
     Incorrect.gameObject.SetActive(true);
+
+    incorrect = true;
 
      //increment day by one
     //InvManager.Instance.day=InvManager.Instance.day+1;
