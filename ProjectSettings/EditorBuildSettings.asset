@@ -104,4 +104,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/PoliceStation0-2.unity
     guid: 9967986e3506d07438e806c0eab03bd1
+  - enabled: 1
+    path: Assets/Scenes/Library0.unity
+    guid: 223e1768d7503e24bb2160f3dd6819f4
+  - enabled: 1
+    path: Assets/Scenes/Library0-2.unity
+    guid: 49eba0020ee3e1448beb9b18de19edd3
+  - enabled: 1
+    path: Assets/Scenes/DinerOnly0.unity
+    guid: c5909d957068ae24ea7198ac6c8e668f
+  - enabled: 1
+    path: Assets/Scenes/School0.unity
+    guid: a2a01598985c8f842b05c03afcc497a4
   m_configObjects: {}

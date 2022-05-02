@@ -237,7 +237,7 @@ public class PlayerRaycasting : MonoBehaviour
                     }
                     else if (whatIHit.collider.gameObject.GetComponent<DoorManager>().whatDoorAmI == DoorManager.Doors.day0DinerDoor)
                     {                      
-                        SceneManager.LoadScene("Diner0", LoadSceneMode.Single);
+                        SceneManager.LoadScene("DinerOnly0", LoadSceneMode.Single);
                     }
                     else if (whatIHit.collider.gameObject.GetComponent<DoorManager>().whatDoorAmI == DoorManager.Doors.day0SchoolDoor)
                     {                      
