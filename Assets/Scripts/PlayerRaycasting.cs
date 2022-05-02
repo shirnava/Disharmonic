@@ -210,6 +210,121 @@ public class PlayerRaycasting : MonoBehaviour
                     {                      
                         SceneManager.LoadScene("DinerOnly", LoadSceneMode.Single);
                     }
+
+
+
+
+                    // Day 0 Spawning 
+                    else if (whatIHit.collider.gameObject.GetComponent<DoorManager>().whatDoorAmI == DoorManager.Doors.day0LibraryDoor)
+                    {                      
+                        SceneManager.LoadScene("Library0", LoadSceneMode.Single);
+                    }
+                    else if (whatIHit.collider.gameObject.GetComponent<DoorManager>().whatDoorAmI == DoorManager.Doors.day0LibraryDoor2)
+                    {                      
+                        SceneManager.LoadScene("Library0-2", LoadSceneMode.Single);
+                    }
+                    else if (whatIHit.collider.gameObject.GetComponent<DoorManager>().whatDoorAmI == DoorManager.Doors.day0PoliceStationDoor)
+                    {                      
+                        SceneManager.LoadScene("PoliceStation0", LoadSceneMode.Single);
+                    }
+                    else if (whatIHit.collider.gameObject.GetComponent<DoorManager>().whatDoorAmI == DoorManager.Doors.day0PoliceStationDoor2)
+                    {                      
+                        SceneManager.LoadScene("PoliceStation0-2", LoadSceneMode.Single);
+                    }
+                    else if (whatIHit.collider.gameObject.GetComponent<DoorManager>().whatDoorAmI == DoorManager.Doors.day0ChurchDoor)
+                    {                      
+                        SceneManager.LoadScene("Church0", LoadSceneMode.Single);
+                    }
+                    else if (whatIHit.collider.gameObject.GetComponent<DoorManager>().whatDoorAmI == DoorManager.Doors.day0DinerDoor)
+                    {                      
+                        SceneManager.LoadScene("Diner0", LoadSceneMode.Single);
+                    }
+                    else if (whatIHit.collider.gameObject.GetComponent<DoorManager>().whatDoorAmI == DoorManager.Doors.day0SchoolDoor)
+                    {                      
+                        SceneManager.LoadScene("School0", LoadSceneMode.Single);
+                    }
+
+
+                    else if (whatIHit.collider.gameObject.GetComponent<DoorManager>().whatDoorAmI == DoorManager.Doors.Day0TP1)
+                    {                      
+                        SceneManager.LoadScene("0TP1", LoadSceneMode.Single);
+                    }
+                    else if (whatIHit.collider.gameObject.GetComponent<DoorManager>().whatDoorAmI == DoorManager.Doors.Day0TP2)
+                    {                      
+                        SceneManager.LoadScene("0TP2", LoadSceneMode.Single);
+                    }
+                    else if (whatIHit.collider.gameObject.GetComponent<DoorManager>().whatDoorAmI == DoorManager.Doors.Day0TL1)
+                    {                      
+                        SceneManager.LoadScene("0TL1", LoadSceneMode.Single);
+                    }
+                    else if (whatIHit.collider.gameObject.GetComponent<DoorManager>().whatDoorAmI == DoorManager.Doors.Day0TL2)
+                    {                      
+                        SceneManager.LoadScene("0TL2", LoadSceneMode.Single);
+                    }
+                    else if (whatIHit.collider.gameObject.GetComponent<DoorManager>().whatDoorAmI == DoorManager.Doors.Day0TD)
+                    {                      
+                        SceneManager.LoadScene("0TD", LoadSceneMode.Single);
+                    }
+                    else if (whatIHit.collider.gameObject.GetComponent<DoorManager>().whatDoorAmI == DoorManager.Doors.Day0TC)
+                    {                      
+                        SceneManager.LoadScene("0TC", LoadSceneMode.Single);
+                    }
+                    else if (whatIHit.collider.gameObject.GetComponent<DoorManager>().whatDoorAmI == DoorManager.Doors.Day0TS)
+                    {                      
+                        SceneManager.LoadScene("0TS", LoadSceneMode.Single);
+                    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                     else if (whatIHit.collider.gameObject.GetComponent<DoorManager>().whatDoorAmI == DoorManager.Doors.greenDoor)
                     {
                         if (player.GetComponent<Inventory>().hasGreenKey == true)

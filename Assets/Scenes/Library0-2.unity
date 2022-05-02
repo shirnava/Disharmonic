@@ -1008,7 +1008,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6cf253bcc46f68e4fb4725f79ba9d4fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  whatDoorAmI: 13
+  whatDoorAmI: 20
 --- !u!65 &30023105
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21205,7 +21205,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6cf253bcc46f68e4fb4725f79ba9d4fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  whatDoorAmI: 14
+  whatDoorAmI: 21
 --- !u!1 &1542312750
 GameObject:
   m_ObjectHideFlags: 0

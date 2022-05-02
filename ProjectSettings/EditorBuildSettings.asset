@@ -74,4 +74,34 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GameOver.unity
     guid: e3f489e54670260469f4204e8117e7b2
+  - enabled: 1
+    path: Assets/Scenes/0TD.unity
+    guid: efbbfb7991b64cc41a5ecd4758f8f390
+  - enabled: 1
+    path: Assets/Scenes/0TC.unity
+    guid: 5bfc61e75400a3a4e916e56e6e625e3f
+  - enabled: 1
+    path: Assets/Scenes/0TS.unity
+    guid: 092380b04da3ed04ca8dbee36d322dff
+  - enabled: 1
+    path: Assets/Scenes/0TL1.unity
+    guid: ef78cd47500f2f74cb6250a6b0e124e3
+  - enabled: 1
+    path: Assets/Scenes/0TL2.unity
+    guid: edff2b99e4be2174783a407719e47d89
+  - enabled: 1
+    path: Assets/Scenes/0TP1.unity
+    guid: 557f0896a505fd240b1837f554931d88
+  - enabled: 1
+    path: Assets/Scenes/0TP2.unity
+    guid: a158e2a50e2e0544685391436d77cff6
+  - enabled: 1
+    path: Assets/Scenes/Town0.unity
+    guid: 808450dc3e45d79479bcbdfea42fbf76
+  - enabled: 1
+    path: Assets/Scenes/PoliceStation0.unity
+    guid: 1a6fe0bba536e9f4d858c08522892f29
+  - enabled: 1
+    path: Assets/Scenes/PoliceStation0-2.unity
+    guid: 9967986e3506d07438e806c0eab03bd1
   m_configObjects: {}
