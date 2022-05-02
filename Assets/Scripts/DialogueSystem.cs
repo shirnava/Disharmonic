@@ -216,7 +216,7 @@ public class DialogueSystem: MonoBehaviour {
     {
         switch (nameText.text)
         {
-        case "Sarah (Police Deputy)":
+        case "Sara (Police Deputy)":
             FindObjectOfType<AudioManager>().Play("TalkHigh");
             break;
         case "Lilith (Gravekeeper)":
@@ -259,7 +259,7 @@ public class DialogueSystem: MonoBehaviour {
     {
         switch (nameText.text)
         {
-        case "Sarah (Police Deputy)":
+        case "Sara (Police Deputy)":
             FindObjectOfType<AudioManager>().Stop("TalkHigh");
             break;
         case "Lilith (Gravekeeper)":
