@@ -222,6 +222,33 @@ public class DialogueSystem: MonoBehaviour {
         case "Lilith (Gravekeeper)":
             FindObjectOfType<AudioManager>().Play("TalkMedium");
             break;
+        case "Lucas (Receptionist)":
+            FindObjectOfType<AudioManager>().Play("TalkHigh");
+            break;
+        case "Ms. Maria (Teacher)":
+            FindObjectOfType<AudioManager>().Play("TalkHigh");
+            break;
+        case "Rodney (Chief of Police)":
+            FindObjectOfType<AudioManager>().Play("TalkLow");
+            break;
+        case "Janelle (Younger Student)":
+            FindObjectOfType<AudioManager>().Play("TalkChild");
+            break;
+        case "Agnes (Librarian)":
+            FindObjectOfType<AudioManager>().Play("TalkLow");
+            break;
+        case "Michael (Older Student)":
+            FindObjectOfType<AudioManager>().Play("TalkMedium");
+            break;
+        case "Ms. Evans (Michael's Mother)":
+            FindObjectOfType<AudioManager>().Play("TalkHigh");
+            break;
+        case "Clara (Waitress)":
+            FindObjectOfType<AudioManager>().Play("TalkMedium");
+            break;
+        case "Father David (Pastor)":
+            FindObjectOfType<AudioManager>().Play("TalkLow");
+            break;
         default:
             FindObjectOfType<AudioManager>().Play("TalkLow");
             break;
@@ -237,6 +264,33 @@ public class DialogueSystem: MonoBehaviour {
             break;
         case "Lilith (Gravekeeper)":
             FindObjectOfType<AudioManager>().Stop("TalkMedium");
+            break;
+        case "Lucas (Receptionist)":
+            FindObjectOfType<AudioManager>().Stop("TalkHigh");
+            break;
+        case "Ms. Maria (Teacher)":
+            FindObjectOfType<AudioManager>().Stop("TalkHigh");
+            break;
+        case "Rodney (Chief of Police)":
+            FindObjectOfType<AudioManager>().Stop("TalkLow");
+            break;
+        case "Janelle (Younger Student)":
+            FindObjectOfType<AudioManager>().Stop("TalkChild");
+            break;
+        case "Agnes (Librarian)":
+            FindObjectOfType<AudioManager>().Stop("TalkLow");
+            break;
+        case "Michael (Older Student)":
+            FindObjectOfType<AudioManager>().Stop("TalkMedium");
+            break;
+        case "Ms. Evans (Michael's Mother)":
+            FindObjectOfType<AudioManager>().Stop("TalkHigh");
+            break;
+        case "Clara (Waitress)":
+            FindObjectOfType<AudioManager>().Stop("TalkMedium");
+            break;
+        case "Father David (Pastor)":
+            FindObjectOfType<AudioManager>().Stop("TalkLow");
             break;
         default:
             FindObjectOfType<AudioManager>().Stop("TalkLow");

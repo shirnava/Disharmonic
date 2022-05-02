@@ -49210,7 +49210,7 @@ MonoBehaviour:
   ChatBackGround: {fileID: 1980944697}
   NPCCharacter: {fileID: 1729540898}
   Name: Lucas (Receptionist)
-  pict: {fileID: 0}
+  pict: {fileID: 21300000, guid: f3e7c3e0d480ad04ba7c6e331b18cded, type: 3}
   sentences:
   - "H-huh? What? What do you need? \nHuh?"
   - "... My\u2026 My fr-friend? Why do you \nneed to know?"
