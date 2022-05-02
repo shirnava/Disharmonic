@@ -894,7 +894,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6cf253bcc46f68e4fb4725f79ba9d4fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  whatDoorAmI: 16
+  whatDoorAmI: 23
 --- !u!64 &184722042
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4804,7 +4804,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6cf253bcc46f68e4fb4725f79ba9d4fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  whatDoorAmI: 16
+  whatDoorAmI: 23
 --- !u!64 &1277697658
 MeshCollider:
   m_ObjectHideFlags: 0

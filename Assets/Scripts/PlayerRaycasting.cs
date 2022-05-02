@@ -233,7 +233,7 @@ public class PlayerRaycasting : MonoBehaviour
                     }
                     else if (whatIHit.collider.gameObject.GetComponent<DoorManager>().whatDoorAmI == DoorManager.Doors.day0ChurchDoor)
                     {                      
-                        SceneManager.LoadScene("Church0", LoadSceneMode.Single);
+                        SceneManager.LoadScene("ChurchScene0", LoadSceneMode.Single);
                     }
                     else if (whatIHit.collider.gameObject.GetComponent<DoorManager>().whatDoorAmI == DoorManager.Doors.day0DinerDoor)
                     {                      
@@ -273,52 +273,6 @@ public class PlayerRaycasting : MonoBehaviour
                     {                      
                         SceneManager.LoadScene("0TS", LoadSceneMode.Single);
                     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
