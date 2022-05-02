@@ -32,7 +32,9 @@ public class InvCopy : MonoBehaviour
         if(player!= null  )
         {
             if(currentScene.name == "Town" || currentScene.name == "TP1" || currentScene.name == "TP2" || currentScene.name == "TL1" ||
-               currentScene.name == "TL2" || currentScene.name == "TD" ||  currentScene.name == "TC" || currentScene.name == "TS")
+               currentScene.name == "TL2" || currentScene.name == "TD" ||  currentScene.name == "TC" || currentScene.name == "TS" ||
+               currentScene.name == "Town0" || currentScene.name == "0TP1" || currentScene.name == "0TP2" || currentScene.name == "0TL1" ||
+               currentScene.name == "0TL2" || currentScene.name == "0TD" ||  currentScene.name == "0TC" || currentScene.name == "0TS")
             {
                 hasRedKey = player.GetComponent<Inventory>().hasRedKey;
                 hasBlueKey = player.GetComponent<Inventory>().hasBlueKey;
