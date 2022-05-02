@@ -26466,7 +26466,7 @@ MonoBehaviour:
   NPCCharacter: {fileID: 2141241590}
   Inventory: {fileID: 0}
   Name: Janelle (Younger Student)
-  pict: {fileID: 0}
+  pict: {fileID: 21300000, guid: 1dd2e284bd9227a4d840e1c38492294a, type: 3}
   sentences:
   - "... A-Agh! \u2026 I-I-I-I\u2026 H-H-Hello! \nM-M-My name is Janelle!"
   - "M-M-My momma told me I hafta \nbe polite! E-E-Even if\u2026 t-t-t-t-\nthat stinky
