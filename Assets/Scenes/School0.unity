@@ -1349,8 +1349,8 @@ MonoBehaviour:
     That''s
     cool.'
   - "... The adults in this place are kinda \nweird, but they\u2019re nice, I guess."
-  - "Be nice to Janelle, \u2018kay? She\u2019s like my kid sister or something. Tell
-    her happy belated birthday, and she\u2019ll like, explode with happiness."
+  - "Be nice to Janelle, \u2018kay? She\u2019s like my kid sister or something."
+  - "Tell her happy belated birthday, and she\u2019ll like, explode with happiness."
   player: {fileID: 0}
   enemy: {fileID: 0}
   talk: {fileID: 0}
@@ -1409,8 +1409,8 @@ MonoBehaviour:
     That''s
     cool.'
   - "... The adults in this place are kinda \nweird, but they\u2019re nice, I guess."
-  - "Be nice to Janelle, \u2018kay? She\u2019s like my kid sister or something. Tell
-    her happy belated birthday, and she\u2019ll like, explode with happiness."
+  - "Be nice to Janelle, \u2018kay? She\u2019s like my kid sister or something."
+  - "Tell her happy belated birthday, and she\u2019ll like, explode with happiness."
   player: {fileID: 0}
   enemy: {fileID: 0}
   talk: {fileID: 0}
