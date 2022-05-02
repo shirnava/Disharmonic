@@ -757,7 +757,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1644572319153144, guid: d82bc42a44b50814b814b25caf68fa8a, type: 3}
       propertyPath: m_Name
-      value: Classic_DoubleDoor_01_snaps001 (1)
+      value: TL1 Door
+      objectReference: {fileID: 0}
+    - target: {fileID: 1644572319153144, guid: d82bc42a44b50814b814b25caf68fa8a, type: 3}
+      propertyPath: m_TagString
+      value: Doors
       objectReference: {fileID: 0}
     - target: {fileID: 4567659352534336, guid: d82bc42a44b50814b814b25caf68fa8a, type: 3}
       propertyPath: m_RootOrder
@@ -847,11 +851,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 30023103}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e6bf3041c1685d47805e779d598eb31, type: 3}
+  m_Script: {fileID: 11500000, guid: 6cf253bcc46f68e4fb4725f79ba9d4fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoad: Town
-  exitName: Library
+  whatDoorAmI: 13
+--- !u!65 &30023105
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 30023103}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.5, y: 2.2539062, z: 0.21875046}
+  m_Center: {x: 0, y: 1.1269531, z: 0.00000023841856}
 --- !u!1 &35237892
 GameObject:
   m_ObjectHideFlags: 0
@@ -21093,6 +21109,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Classic_DoubleDoor_01_snaps001
       objectReference: {fileID: 0}
+    - target: {fileID: 1644572319153144, guid: d82bc42a44b50814b814b25caf68fa8a, type: 3}
+      propertyPath: m_TagString
+      value: Doors
+      objectReference: {fileID: 0}
     - target: {fileID: 4567659352534336, guid: d82bc42a44b50814b814b25caf68fa8a, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -21147,6 +21167,37 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d82bc42a44b50814b814b25caf68fa8a, type: 3}
+--- !u!1 &1539657539 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1644572319153144, guid: d82bc42a44b50814b814b25caf68fa8a, type: 3}
+  m_PrefabInstance: {fileID: 1539657538}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1539657540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1539657539}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cf253bcc46f68e4fb4725f79ba9d4fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  whatDoorAmI: 14
+--- !u!65 &1539657541
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1539657539}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.5000005, y: 2.2539062, z: 0.21875054}
+  m_Center: {x: 0, y: 1.1269531, z: 0.00000023841864}
 --- !u!1 &1542312750
 GameObject:
   m_ObjectHideFlags: 0

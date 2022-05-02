@@ -12,8 +12,8 @@ public class PlayerSceneScript : MonoBehaviour
     {
         if(instance != null )
         {
-            Debug.Log("Destroyed in PlayerSceneScript: " + gameObject);
-            Destroy(gameObject);
+            // Debug.Log("Destroyed in PlayerSceneScript: " + gameObject);
+           // Destroy(gameObject);
         }
         else{
            

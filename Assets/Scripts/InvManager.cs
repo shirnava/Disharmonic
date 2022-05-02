@@ -10,7 +10,9 @@ public class InvManager : MonoBehaviour
 
     public Transform ItemContent;
     public GameObject InventoryItem;
-    [SerializeField] GameObject NoItemsText;
+    //[SerializeField] GameObject NoItemsText;
+
+    public GameObject NoItemsText;
     public bool hasWonFirstDay, hasWonSecondDay, hasWonThirdDay = false;
     public int day=1;
 
@@ -30,26 +32,31 @@ public class InvManager : MonoBehaviour
     public void ListItems()
     {
 
-        if(Items.Count==0)
-        {
-            NoItemsText.gameObject.SetActive(true);
-        }
-        else
-        {
-            NoItemsText.gameObject.SetActive(false);
-        }
-        foreach(Transform item in ItemContent)
-        {
-            Destroy(item.gameObject);
-        }
-        foreach (var item in Items)
-        {
-            GameObject obj = Instantiate(InventoryItem,ItemContent);
-            var itemName = obj.transform.Find("ItemName").GetComponent<Text>();
-            var itemIcon = obj.transform.Find("ItemIcon").GetComponent<Image>();
+      //  if(NoItemsText != null)
+       // {
+            if(Items.Count==0)
+            {
+                NoItemsText.gameObject.SetActive(true);
+            }
+            else
+            {
+                NoItemsText.gameObject.SetActive(false);
+            }
+            
+            foreach(Transform item in ItemContent)
+            {
+                Destroy(item.gameObject);
+            }
+            foreach (var item in Items)
+            {
+                GameObject obj = Instantiate(InventoryItem,ItemContent);
+                var itemName = obj.transform.Find("ItemName").GetComponent<Text>();
+                var itemIcon = obj.transform.Find("ItemIcon").GetComponent<Image>();
 
-            itemName.text = item.displayName;
-            itemIcon.sprite = item.icon;
-        }
+                itemName.text = item.displayName;
+                itemIcon.sprite = item.icon;
+            }
+       // }
+        
     }
 }

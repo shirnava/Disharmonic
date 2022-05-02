@@ -50,4 +50,25 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/IntroCutscene.unity
     guid: fdca4ff47ae454841b8e032f3e7f64b5
+  - enabled: 1
+    path: Assets/Scenes/TP1.unity
+    guid: 81d9f3f72ff5d7849adf831f27ee1f39
+  - enabled: 1
+    path: Assets/Scenes/TP2.unity
+    guid: 48be790622156514286f93544601b22c
+  - enabled: 1
+    path: Assets/Scenes/TL1.unity
+    guid: de7a19218bcc3a34491a7f44d42135b4
+  - enabled: 1
+    path: Assets/Scenes/TL2.unity
+    guid: 36f8c0883bc5d80428d0a13a3ddc8e72
+  - enabled: 1
+    path: Assets/Scenes/TD.unity
+    guid: b44f7473d1d7ed44dbb83c7a8d709132
+  - enabled: 1
+    path: Assets/Scenes/TS.unity
+    guid: 2fde67e85702ae845b8db69dbe15e1f8
+  - enabled: 1
+    path: Assets/Scenes/TC.unity
+    guid: c91f2902a44e6794895b683f9f516534
   m_configObjects: {}

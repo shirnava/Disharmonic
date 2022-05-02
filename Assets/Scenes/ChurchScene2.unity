@@ -882,6 +882,19 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8458267384312400660, guid: dc2f0795586147e4786d43a12127628b, type: 3}
   m_PrefabInstance: {fileID: 926138368}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &184722041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 184722040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cf253bcc46f68e4fb4725f79ba9d4fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  whatDoorAmI: 16
 --- !u!64 &184722042
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -896,6 +909,32 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -5446245916512623864, guid: 6e9fa4e6b3bf6be4f87ade800a1ae47b, type: 3}
+--- !u!65 &184722043
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 184722040}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.7499993, y: 10, z: 0.16786005}
+  m_Center: {x: 1.8749977, y: 5, z: 18.937037}
+--- !u!65 &184722044
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 184722040}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.7499993, y: 10, z: 0.16786005}
+  m_Center: {x: 1.8749977, y: 5, z: 18.937037}
 --- !u!1 &212986329
 GameObject:
   m_ObjectHideFlags: 0
@@ -3506,6 +3545,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6467211485422711102, guid: dc2f0795586147e4786d43a12127628b, type: 3}
+      propertyPath: m_TagString
+      value: Doors
+      objectReference: {fileID: 0}
     - target: {fileID: 7182216809450120396, guid: dc2f0795586147e4786d43a12127628b, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.9585366
@@ -3541,6 +3584,10 @@ PrefabInstance:
     - target: {fileID: 7739153715016033349, guid: dc2f0795586147e4786d43a12127628b, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8458267384312400660, guid: dc2f0795586147e4786d43a12127628b, type: 3}
+      propertyPath: m_TagString
+      value: Doors
       objectReference: {fileID: 0}
     - target: {fileID: 8934972607319723953, guid: dc2f0795586147e4786d43a12127628b, type: 3}
       propertyPath: m_LocalScale.x
@@ -4714,6 +4761,19 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6467211485422711102, guid: dc2f0795586147e4786d43a12127628b, type: 3}
   m_PrefabInstance: {fileID: 926138368}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1277697657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1277697656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cf253bcc46f68e4fb4725f79ba9d4fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  whatDoorAmI: 16
 --- !u!64 &1277697658
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4728,6 +4788,32 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 626925064987508600, guid: 6e9fa4e6b3bf6be4f87ade800a1ae47b, type: 3}
+--- !u!65 &1277697659
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1277697656}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.749998, y: 10, z: 0.16786003}
+  m_Center: {x: -1.875001, y: 5, z: 18.937035}
+--- !u!65 &1277697660
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1277697656}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.749998, y: 10, z: 0.16786003}
+  m_Center: {x: -1.875001, y: 5, z: 18.937035}
 --- !u!1 &1307554995
 GameObject:
   m_ObjectHideFlags: 0
