@@ -43,6 +43,7 @@ public class AI : MonoBehaviour {
         if(state == AIState.Distracted)
         {
             Distracted();
+        }
     }
 
     protected void runState()
