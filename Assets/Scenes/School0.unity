@@ -2796,7 +2796,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6cf253bcc46f68e4fb4725f79ba9d4fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  whatDoorAmI: 17
+  whatDoorAmI: 24
 --- !u!65 &190299427
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19440,7 +19440,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1817511018758452, guid: 405988af1bd38ee4fb92e86058b6c926, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1817511018758452, guid: 405988af1bd38ee4fb92e86058b6c926, type: 3}
       propertyPath: m_StaticEditorFlags
