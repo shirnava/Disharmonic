@@ -15654,7 +15654,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   musicSource: {fileID: 584236010}
-  musicStart: {fileID: 8300000, guid: 396a5b42d9fcb23468c6f8a9eec26319, type: 3}
+  musicStart: {fileID: 8300000, guid: dc238d0fe067b274fbe3716751a4663a, type: 3}
 --- !u!82 &584236010
 AudioSource:
   m_ObjectHideFlags: 0
@@ -15665,7 +15665,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24300002, guid: 41d213742774b4afbaecdb79c34bcbfb, type: 2}
-  m_audioClip: {fileID: 8300000, guid: 87af542cc96a6644c88d2446ae62a1d1, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 617bb2896979dc74c87c8c928af4d342, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.87
   m_Pitch: 1
@@ -20357,16 +20357,16 @@ MonoBehaviour:
   pict: {fileID: 21300000, guid: b3b1339767971c8429be25bf1cf252b8, type: 3}
   sentences:
   - "Police Chief Rodney Rogers,\nat your service. Welcome to Harmony!\nNever thought
-    that I\u2019d see a big city detective around these parts! "
-  - "Guess you folk must really think we\u2019re bumpkins out here."
-  - "I\u2019m just pulling your leg, kiddo. It\u2019ll \nbe nice to have someone
-    around \nto help me keep an eye on the ne\u2019er do \nwells of the town. All
-    two of \u2018em! Haha!"
-  - "Well, since you\u2019re here, you might as well introduce yourself to everyone.
-    The library, school, and church are what\u2019s really hoppin\u2019 around here.
-    Don\u2019t wander too far out."
-  - "Oh, and don\u2019t forget to get some of Clara\u2019s famous banana pancakes
-    at the diner down south of here!"
+    that I\u2019d see a big \ncity detective around these parts! "
+  - "Guess you folk must really think \nwe\u2019re bumpkins out here."
+  - "I\u2019m just pulling your leg, kiddo. \nIt\u2019ll be nice to have someone
+    around \nto help me keep an eye on the ne\u2019er \ndo wells of the town."
+  - "All two of \u2018em! Haha! "
+  - "Well, since you\u2019re here, you might \nas well introduce yourself to \neveryone. "
+  - "The library, school, and church are \nwhat\u2019s really hoppin\u2019 around
+    here. \nDon\u2019t wander too far out."
+  - "Oh, and don\u2019t forget to get some of \nClara\u2019s famous banana pancakes
+    at \nthe diner down North of here!"
   player: {fileID: 0}
   enemy: {fileID: 0}
   talk: {fileID: 0}
@@ -49450,8 +49450,8 @@ MonoBehaviour:
   sentences:
   - Hee-ek!
   - You scared me! What?!
-  - "Oh, hello. Yes. It\u2019s nice to meet you. Welcome to Harmony. I\u2019m Lucas."
-  - "Have fun out there\u2026 but don\u2019t sneak up on people like that anymore!"
+  - "Oh, hello. Yes. It\u2019s nice to meet \nyou. Welcome to Harmony. I\u2019m Lucas."
+  - "Have fun out there\u2026 but don\u2019t sneak \nup on people like that anymore!"
   player: {fileID: 0}
   enemy: {fileID: 0}
   talk: {fileID: 0}

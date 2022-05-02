@@ -3866,7 +3866,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   musicSource: {fileID: 249174115}
-  musicStart: {fileID: 8300000, guid: ef8ba4c4942535c4fb799632435514c7, type: 3}
+  musicStart: {fileID: 8300000, guid: ae4555247792a8e408e7dc2dd69f3e58, type: 3}
 --- !u!82 &249174115
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3877,7 +3877,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24300002, guid: 41d213742774b4afbaecdb79c34bcbfb, type: 2}
-  m_audioClip: {fileID: 8300000, guid: 32acff642c9fbaa4381b8eef5200b979, type: 3}
+  m_audioClip: {fileID: 8300000, guid: d4052cecf6186bb459d8a3f8920050da, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.87
   m_Pitch: 1
@@ -5024,8 +5024,8 @@ MonoBehaviour:
   Name: Ms. Evans (Michael's Mother)
   pict: {fileID: 21300000, guid: da2178a7c6dc66c498d8905e98e38cd3, type: 3}
   sentences:
-  - "Oh, hello! It\u2019s nice to meet you!\nMy name is Ms. Evans. I\u2019m the mother
-    of Michael."
+  - "Oh, hello! It\u2019s nice to meet you!\nMy name is Ms. Evans. My son,\nMichael,
+    goes to school in\nHarmony."
   - "... We can chat more later! I don\u2019t\nwant to set off Agnes."
   player: {fileID: 0}
   enemy: {fileID: 0}
@@ -26621,7 +26621,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1728350845
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32148,18 +32148,14 @@ MonoBehaviour:
   Name: Agnes (Librarian)
   pict: {fileID: 21300000, guid: b072645aa517ab64c9be0c4b05f9d213, type: 3}
   sentences:
-  - "Given that you\u2019re new here,\nI will give you the benefit of the \ndoubt
-    and assume you have never \nheard of a library, with the way you\u2019re stomping
-    around."
-  - 'A library is a place of PEACE and QUIET
-
-    where the intellectuals amongst
-    us may broaden our horizons and LEARN. '
+  - "Given that you\u2019re new here, I will \ngive you the benefit of the doubt
+    \nand assume you have never heard \nof a library, "
+  - "given the way you\u2019re stomping \naround.\n"
+  - "A library is a place of PEACE and \nQUIET where the intellectuals \namongst
+    us may broaden our \nhorizons and LEARN. \n"
   - NOT RUN AROUND.
-  - '... My name is Agnes. Do come back
-
-    QUIETLY if you should need any reading
-    material.'
+  - "... My name is Agnes. Do come back\nQUIETLY if you should need any \nreading
+    material."
   player: {fileID: 0}
   enemy: {fileID: 0}
   talk: {fileID: 0}
