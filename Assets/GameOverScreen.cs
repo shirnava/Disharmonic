@@ -50,7 +50,18 @@ public class GameOverScreen : MonoBehaviour
         }
         else if (tracker.day == 2)
         {
-            // SceneManager.LoadScene("OutroCut");
+           SceneManager.LoadScene("OutroCutscene");
+
+          // if(tracker.correctVotes == 2)
+          // {
+          //   //good ending scene
+          //    SceneManager.LoadScene("");
+          // }
+          // else
+          // {
+          //   //bad ending scene
+          //    SceneManager.LoadScene("");
+          // }
         }
   }
 
