@@ -7,9 +7,10 @@ using UnityEngine.Video;
 public class videologic : MonoBehaviour
 {
     VideoPlayer video;
- 
+    Scene a;
     void Awake()
     {
+        a = SceneManager.GetActiveScene();
         video = GetComponent<VideoPlayer>();
         video.Play();
         video.loopPointReached += CheckOver;
@@ -20,7 +21,10 @@ public class videologic : MonoBehaviour
  
      void CheckOver(UnityEngine.Video.VideoPlayer vp)
     {
-        SceneManager.LoadScene("Town", LoadSceneMode.Single);
+        if (a.name == "OutroCutscene")
+            SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
+        else
+            SceneManager.LoadScene("Town", LoadSceneMode.Single);
     }
 }
 
