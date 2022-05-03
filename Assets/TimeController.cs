@@ -61,9 +61,12 @@ public class TimeController : MonoBehaviour
     [SerializeField]
     private ParticleSystem fog2;
 
+    public Day_Vote_Tracker tracker;
+
     // Start is called before the first frame update
     void Start()
     {
+        tracker = GameObject.Find("DayTracker").GetComponent<Day_Vote_Tracker>();
         startOfDay = DateTime.Now.Date;
         currentTime = DateTime.Now.Date + TimeSpan.FromHours(startHour);
 
@@ -103,7 +106,14 @@ public class TimeController : MonoBehaviour
             //Debug.Log("End of the day");
             Destroy( GameObject.FindWithTag("Ddme"));
             Destroy(GameObject.FindWithTag("TestThrowCube"));
-            SceneManager.LoadScene("EndDayScreen");
+            if (tracker.day == 1)
+            {
+                SceneManager.LoadScene("EndDayScreen0");
+            }
+            else if (tracker.day == 2)
+            {
+                SceneManager.LoadScene("EndDayScreen");
+            }
         }
 
         startOfDay = currentTime.Date;
