@@ -21,10 +21,10 @@ public class videologic : MonoBehaviour
  
      void CheckOver(UnityEngine.Video.VideoPlayer vp)
     {
-        if (a.name == "OutroCutscene")
+        if (a.name == "OutroCutscene" || a.name == "OutroCutscene1")
             SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
         else
-            SceneManager.LoadScene("Town", LoadSceneMode.Single);
+            SceneManager.LoadScene("Town0", LoadSceneMode.Single);
     }
 }
 
