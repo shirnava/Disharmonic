@@ -1827,10 +1827,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 3.131604
-  m_Height: 6.2632074
+  m_Radius: 5.52043
+  m_Height: 11.04086
   m_Direction: 1
-  m_Center: {x: 1.0157828, y: -1.2324609, z: -0.45538646}
+  m_Center: {x: 1.0157837, y: -1.2324612, z: -1.3826504}
 --- !u!136 &490837520
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1864,7 +1864,7 @@ MonoBehaviour:
   Name: Father David (Pastor)
   pict: {fileID: 21300000, guid: 0ff86ba728f1b1046a8fe5dab1af15a8, type: 3}
   sentences:
-  - "I\u2019m unaware of the \ncircumstances surrounding\nHomeless Person\u2019s
+  - "I\u2019m unaware of the \ncircumstances surrounding\nthe Homeless Person\u2019s
     \npassing last night. "
   - You may ask someone else.
   player: {fileID: 0}

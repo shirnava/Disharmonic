@@ -4481,10 +4481,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 2.5001142
-  m_Height: 5.00023
+  m_Radius: 3.2945085
+  m_Height: 6.589017
   m_Direction: 1
-  m_Center: {x: 0.384294, y: -1.2324605, z: -0.45538637}
+  m_Center: {x: 1.1786882, y: -0.9355979, z: -0.45538643}
 --- !u!136 &356395095
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -4495,10 +4495,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 1.6158324
+  m_Radius: 1.0428603
   m_Height: 3.2316656
   m_Direction: 1
-  m_Center: {x: -0.3086354, y: 0, z: -0.5884871}
+  m_Center: {x: -0.88160735, y: 0, z: -0.58848804}
 --- !u!114 &356395096
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8376,7 +8376,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh62094
+  m_Name: pb_Mesh70058
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -12602,7 +12602,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh62822
+  m_Name: pb_Mesh70788
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -21383,10 +21383,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 2.5001142
-  m_Height: 5.00023
+  m_Radius: 3.5092738
+  m_Height: 7.0185494
   m_Direction: 1
-  m_Center: {x: 0.384294, y: -1.2324605, z: -0.45538637}
+  m_Center: {x: 1.1034682, y: -0.8946445, z: -0.1654022}
 --- !u!136 &1568126736
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -21397,10 +21397,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 1.6158324
+  m_Radius: 1.111927
   m_Height: 3.2316656
   m_Direction: 1
-  m_Center: {x: -0.3086354, y: 0, z: -0.5884871}
+  m_Center: {x: -0.81254053, y: 0, z: -0.58848643}
 --- !u!114 &1568126737
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23027,7 +23027,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1728350845
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25136,7 +25136,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh62646
+  m_Name: pb_Mesh70612
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -27319,7 +27319,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh64078
+  m_Name: pb_Mesh72048
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -27753,10 +27753,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 2.5001142
-  m_Height: 5.00023
+  m_Radius: 3.5793748
+  m_Height: 7.470937
   m_Direction: 1
-  m_Center: {x: 0.384294, y: -1.2324605, z: -0.45538637}
+  m_Center: {x: 0.24933912, y: -1.2324581, z: -0.59372216}
 --- !u!136 &2067373615
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -27767,10 +27767,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 1.6158324
-  m_Height: 3.2316656
+  m_Radius: 1.3149532
+  m_Height: 3.231666
   m_Direction: 1
-  m_Center: {x: -0.3086354, y: 0, z: -0.5884871}
+  m_Center: {x: -0.60951436, y: 0, z: -0.58848643}
 --- !u!114 &2067373616
 MonoBehaviour:
   m_ObjectHideFlags: 0
