@@ -44,8 +44,25 @@ public class GameOverScreen : MonoBehaviour
 
   public void RestartButton()
   {
-    //change to second day when second day scene ready
-    SceneManager.LoadScene("Town");
+    if (tracker.day == 1)
+        {
+            SceneManager.LoadScene("Town");
+        }
+        else if (tracker.day == 2)
+        {
+           SceneManager.LoadScene("OutroCutscene");
+
+          // if(tracker.correctVotes == 2)
+          // {
+          //   //good ending scene
+          //    SceneManager.LoadScene("");
+          // }
+          // else
+          // {
+          //   //bad ending scene
+          //    SceneManager.LoadScene("");
+          // }
+        }
   }
 
   public void CorrectChoice()

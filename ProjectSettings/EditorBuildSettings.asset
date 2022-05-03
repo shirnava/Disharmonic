@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Town.unity
     guid: b7bd6413171c44a1792a6de5f092db6e
   - enabled: 1
-    path: Assets/Scenes/EndDayScreen.unity
+    path: Assets/Scenes/EndDayScreen0.unity
     guid: e11b355d9b23ca8449756f393d43c493
   - enabled: 0
     path: Assets/Scenes/Playground.unity
