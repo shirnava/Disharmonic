@@ -17,15 +17,29 @@ public class sunenabled : MonoBehaviour
     void Update()
     {
         string currentScene = SceneManager.GetActiveScene().name;
-        if (currentScene != "Town")
+        switch(currentScene)
         {
-            sunLight.SetActive(false);
+            case "Town":
+            case "Town0":
+            case "TC":
+            case "TD":
+            case "TL1":
+            case "TL2":
+            case "TP1":
+            case "TP2":
+            case "TS":
+            case "0TC":
+            case "0TD":
+            case "0TL1":
+            case "0TL2":
+            case "0TP1":
+            case "0TP2":
+            case "0TS":
+                sunLight.SetActive(true);
+            break;
+            default:
+                sunLight.SetActive(false);
+            break;
         }
-        if (currentScene == "TownLeavingPoliceStation")
-        {
-            sunLight.SetActive(true); 
-        } 
-
-        
     }
 }
