@@ -1865,8 +1865,8 @@ MonoBehaviour:
   pict: {fileID: 21300000, guid: 0ff86ba728f1b1046a8fe5dab1af15a8, type: 3}
   sentences:
   - Are you lost, blind sheep?
-  - ... I see. Welcome to our house of God.
-  - ... I trust you will respect our teachings. You must.
+  - "... I see. Welcome to our house of \nGod."
+  - "... I trust you will respect our \nteachings. You must."
   player: {fileID: 0}
   enemy: {fileID: 0}
   talk: {fileID: 0}
