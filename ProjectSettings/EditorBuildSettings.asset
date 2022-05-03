@@ -122,4 +122,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/OutroCutscene.unity
     guid: 7474c7250f6fb554d8893b8783ecc793
+  - enabled: 1
+    path: Assets/Scenes/EndDayScreen.unity
+    guid: 97aa7b8e72daf5841aea8c6f747f1503
+  - enabled: 1
+    path: Assets/Scenes/OutroCutscene1.unity
+    guid: 3756c50c43db11449a7b4a954eeacad7
   m_configObjects: {}
