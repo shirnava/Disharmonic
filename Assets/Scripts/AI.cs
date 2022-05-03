@@ -11,7 +11,7 @@ public class AI : MonoBehaviour {
     Transform target;
     NavMeshAgent agent;
     private Vector3 startPosition;
-    [Range(1, 5)] public float walkRadius = 5;
+    [Range(1, 10)] public float walkRadius = 10;
     public bool waiting = false;
     public float moveDelay = 5;
     public Vector3 centerSearch;
