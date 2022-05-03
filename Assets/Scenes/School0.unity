@@ -1348,9 +1348,9 @@ MonoBehaviour:
 
     That''s
     cool.'
-  - "... The adults in this place are kinda \nweird, but they\u2019re nice, I guess."
-  - "Be nice to Janelle, \u2018kay? She\u2019s like my kid sister or something."
-  - "Tell her happy belated birthday, and she\u2019ll like, explode with happiness."
+  - "... The adults in this place are \nkinda weird, but they\u2019re nice, \nI guess."
+  - "Be nice to Janelle, \u2018kay? She\u2019s like \nmy kid sister or something."
+  - "Tell her happy belated birthday, and \nshe\u2019ll like, explode with happiness."
   player: {fileID: 0}
   enemy: {fileID: 0}
   talk: {fileID: 0}
@@ -10321,12 +10321,13 @@ MonoBehaviour:
   Name: Ms. Maria (Teacher)
   pict: {fileID: 21300000, guid: c1d36f448e6634948bb8f30d14fdc108, type: 3}
   sentences:
-  - Good afternoon! Welcome to Harmony Elementary, Middle, and High School!
-  - "We don\u2019t have a large town, so a mixed grade solution is the best for us
-    all here."
-  - Many of my students are out of town right now for the summer, but both Michael
-    and Janelle are a pleasure to have in class. Go ahead and introduce yourself!
-  - I believe they're in the cafeteria right now!
+  - "Good afternoon! Welcome to Harmony \nElementary, Middle, and High School!"
+  - "We don\u2019t have a large town, so a \nmixed grade solution is the best for
+    \nus all here."
+  - "Many of my students are out of town \nright now for the summer, but both \nMichael
+    and Janelle are a pleasure \nto have in class. "
+  - "Go ahead and introduce yourself!\nI believe they're in the cafeteria \nright
+    now!"
   player: {fileID: 0}
   enemy: {fileID: 0}
   talk: {fileID: 0}
