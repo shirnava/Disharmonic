@@ -2650,7 +2650,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh578920
+  m_Name: pb_Mesh21806
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -21584,7 +21584,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh580462
+  m_Name: pb_Mesh23354
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -24024,7 +24024,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh580532
+  m_Name: pb_Mesh23424
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -29371,7 +29371,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh580348
+  m_Name: pb_Mesh23242
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -35064,15 +35064,15 @@ MonoBehaviour:
   Name: Clara (Waitress)
   pict: {fileID: 21300000, guid: ad98b07492f45f7429c160683b6e1859, type: 3}
   sentences:
-  - Oh, finally, I was waiting all afternoon for you, pumpkin! I heard we had a new
-    face in town!
-  - "And my, with a face like that, you\u2019re welcome to stay forever, if you\u2019d
+  - "Oh, finally, I was waiting all \nafternoon for you, pumpkin! I heard\nwe had
+    a new face in town!"
+  - "And my, with a face like that, \nyou\u2019re welcome to stay forever, \nif you\u2019d
     like!"
-  - "Now, sugar, I know this is a bit sudden, but I have a deal for you: If you\u2019ll
-    give these pancakes to old raggedy Joe behind my diner, your meal\u2019s on the
-    house."
-  - "He\u2019s like a vulture, always waiting for me to take out the trash so he
-    can jump in and go trash fishin\u2019."
+  - "Now, sugar, I know this is a bit \nsudden, but I have a deal for you: "
+  - "If you\u2019ll give these pancakes to \nold raggedy Joe behind my diner, \nyour
+    meal\u2019s on the house."
+  - "He\u2019s like a vulture, always waiting \nfor me to take out the trash so he
+    \ncan jump in and go trash fishin\u2019."
   player: {fileID: 0}
   enemy: {fileID: 0}
   talk: {fileID: 0}

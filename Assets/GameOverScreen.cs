@@ -12,6 +12,7 @@ public class GameOverScreen : MonoBehaviour
   public bool done=false;
   public bool correct;
   public bool incorrect;
+  public Day_Vote_Tracker tracker;
 
 
     public void Setup()
@@ -19,7 +20,12 @@ public class GameOverScreen : MonoBehaviour
     //gameObject.setActive(true);
     
   }
-  public void Update()
+    void Start()
+    {
+        tracker = GameObject.Find("DayTracker").GetComponent<Day_Vote_Tracker>();
+
+    }
+    public void Update()
   {
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
@@ -49,26 +55,14 @@ public class GameOverScreen : MonoBehaviour
     Correct.gameObject.SetActive(true);
         correct = true;
 
-    /*
-    if(InvManager.Instance.day==1)
-    {
-      InvManager.Instance.hasWonFirstDay = true;
-    }
-    if(InvManager.Instance.day==2)
-    {
-      InvManager.Instance.hasWonSecondDay = true;
-    }
-    if(InvManager.Instance.day==3)
-    {
-      InvManager.Instance.hasWonThirdDay = true;
-    }
-    */
+        tracker.correctVotes += 1;
+        tracker.day += 1;
 
-    //increment day by one
-    //InvManager.Instance.day=InvManager.Instance.day+1;
+        //increment day by one
+        //InvManager.Instance.day=InvManager.Instance.day+1;
 
-    //toggle boolean to indicate user can now leave end day scene
-    done=true;
+        //toggle boolean to indicate user can now leave end day scene
+        done = true;
   }
 
   public void IncorrectChoice()
@@ -79,11 +73,14 @@ public class GameOverScreen : MonoBehaviour
 
     incorrect = true;
 
-     //increment day by one
-    //InvManager.Instance.day=InvManager.Instance.day+1;
+    tracker.day += 1;
 
-     //toggle boolean to indicate user can now leave end day scene
-    done=true;
+
+        //increment day by one
+        //InvManager.Instance.day=InvManager.Instance.day+1;
+
+        //toggle boolean to indicate user can now leave end day scene
+        done = true;
   }
 
 }
