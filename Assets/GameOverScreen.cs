@@ -44,11 +44,11 @@ public class GameOverScreen : MonoBehaviour
 
   public void RestartButton()
   {
-    if (tracker.day == 1)
+    if (tracker.day == 2)
         {
             SceneManager.LoadScene("Town");
         }
-        else if (tracker.day == 2)
+        else if (tracker.day == 3)
         {
            SceneManager.LoadScene("OutroCutscene");
 
